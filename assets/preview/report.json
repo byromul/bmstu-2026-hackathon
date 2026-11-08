@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T13:14:43.087Z",
+  "date": "2026-11-08T13:35:45.833Z",
   "chrome": "Chrome/156.0.8078.80",
   "offline": true,
   "reports": [
@@ -112,6 +112,216 @@
       "scrollHeight": 626,
       "footerTop": 845,
       "overflow": []
+    },
+    {
+      "slide": 11,
+      "title": "Сравниваем конкретные варианты",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 820.109375,
+      "overflow": []
+    },
+    {
+      "slide": 12,
+      "title": "Кто получает ваши данные",
+      "images": [
+        {
+          "artifact": "ART-0026",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 13,
+      "title": "Что придётся переносить",
+      "images": [
+        {
+          "artifact": "ART-0027",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 14,
+      "title": "Из пожелания в ограниченную задачу",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 15,
+      "title": "Договоримся, что считать готовым",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 16,
+      "title": "SDD связывает требования и проверку",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 17,
+      "title": "Что переживёт длинную сессию",
+      "images": [
+        {
+          "artifact": "ART-0028",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 18,
+      "title": "Язык промпта и цена всей задачи",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 818.609375,
+      "overflow": []
+    },
+    {
+      "slide": 19,
+      "title": "AGENTS.md: правила работы в проекте",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 20,
+      "title": "Инструмент, плагин, MCP, skill и хук",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 846.5,
+      "overflow": []
+    },
+    {
+      "slide": 21,
+      "title": "MCP: подключение почты",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 22,
+      "title": "Когда стоит создать skill",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 23,
+      "title": "Где управлять действиями агента",
+      "images": [
+        {
+          "artifact": "ART-0029",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 24,
+      "title": "Минимальные права для задачи",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 25,
+      "title": "Письмо пытается стать командой",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 26,
+      "title": "Изоляция зависит от доступов",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 27,
+      "title": "Как принять изменение",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 28,
+      "title": "Тест программы и eval агента",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 29,
+      "title": "Первый запуск: от задачи до результата",
+      "images": [
+        {
+          "artifact": "ART-0030",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 30,
+      "title": "Какую среду вы соберёте для себя",
+      "images": [
+        {
+          "artifact": "ART-0031",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
     }
   ],
   "errors": [],
@@ -120,11 +330,18 @@
     "embedded image",
     "embedded image",
     "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
     "embedded image"
   ],
   "keys": {
     "first": "slide-01",
     "second": "slide-02",
+    "last": "slide-30",
     "notes": true
   }
 }

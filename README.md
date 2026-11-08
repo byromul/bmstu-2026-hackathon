@@ -42,3 +42,11 @@ CSS, JavaScript и локальные изображения встраиваю�
 ```sh
 python3 -B assets/test_build.py
 ```
+
+Проверка автономного показа и обновление [галереи превью](assets/preview/index.html):
+
+```sh
+node assets/verify-deck.mjs
+```
+
+Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверенный текущий объём — 30 слайдов теории; приложение и практические настройки пока не подготовлены.

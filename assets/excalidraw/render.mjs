@@ -12,7 +12,7 @@ if(!/^ART-\d{4}$/.test(artifact))throw new Error('Укажите ID вида ART
 const matches=[...markdown.matchAll(/```diagram\n([\s\S]*?)\n```/g)].map(m=>JSON.parse(m[1])).filter(s=>s.artifact===artifact);
 if(matches.length!==1)throw new Error('Нужна одна схема с ID '+artifact+' в slides.md');
 const spec=matches[0];
-const names={'ART-0018':'agent-loop','ART-0021':'sdlc','ART-0022':'llm','ART-0023':'harness'};
+const names={'ART-0018':'agent-loop','ART-0021':'sdlc','ART-0022':'llm','ART-0023':'harness','ART-0026':'proxy','ART-0027':'lockin','ART-0028':'persistence','ART-0029':'controls','ART-0030':'roadmap','ART-0031':'personal'};
 const name=names[artifact];if(!name)throw new Error('Для нового артефакта зарегистрируйте имя результата');
 const prompt=path.join(root,`prompts/${artifact}-${name}-excalidraw-v01.md`);
 await access(prompt);

@@ -1,5 +1,6 @@
 // Один макет для пробы; смысловые данные и подписи читаются из Markdown.
 export function makeSkeleton(spec,fontFamily) {
+  if(['direct-and-proxy','dependency-stack','session-and-files','harness-controls','first-run-roadmap','personal-environment'].includes(spec.layout)) return makeTheory(spec,fontFamily);
   if(spec.layout!=='loop-with-exit') return makeOverview(spec,fontFamily);
   const positions={context:[60,60],model:[600,60],answer:[1140,60],result:[60,390],tool:[600,390]};
   const expected=['context:model','model:tool','tool:result','result:context','model:answer'];
@@ -34,6 +35,60 @@ export function makeSkeleton(spec,fontFamily) {
     elements.push({...base(`${id}-label`),type:'text',x:route.label[0],y:route.label[1],
       text:wrap(edge.label,key==='result:context'||key==='tool:result'?14:25),fontSize:23,fontFamily,
       textAlign:'center',strokeColor:'#17615f',groupIds,customData:{boxWidth:route.label[2]}});
+  }
+  return elements;
+}
+
+// Фиксированные учебные композиции продолжения теории. Смысл — в slides.md.
+function makeTheory(spec,fontFamily) {
+  const elements=[];
+  const hash=id=>[...id].reduce((n,c)=>(Math.imul(n,31)+c.charCodeAt(0))>>>0,7)&0x7fffffff;
+  const base=id=>({id,seed:hash(id),versionNonce:hash(id),strokeWidth:1.8,roughness:.55,strokeColor:'#617470',backgroundColor:'transparent',fillStyle:'solid',opacity:100});
+  const text=(id,value,x,y,width,size=28,color='#17252b')=>elements.push({...base(id),type:'text',x,y,text:value,fontSize:size,fontFamily,textAlign:'center',strokeColor:color,customData:{boxWidth:width}});
+  const wrap=(value,limit)=>value.split('\n').map(line=>{const out=[''];for(const word of line.split(' ')){let i=out.length-1;if(out[i]&&out[i].length+word.length+1>limit)out.push(word);else out[i]+=(out[i]?' ':'')+word;}return out.join('\n');}).join('\n');
+  let pos;
+  if(spec.layout==='direct-and-proxy') {
+    pos={direct_agent:[40,70,360,135],direct_provider:[1060,70,360,135],proxy_agent:[40,330,360,135],proxy:[550,330,360,135],proxy_provider:[1060,330,360,135]};
+    text('direct-label',spec.lanes[0],40,8,1380,27,'#536460');text('proxy-label',spec.lanes[1],40,265,1380,27,'#536460');
+  } else if(spec.layout==='dependency-stack') {
+    pos=Object.fromEntries(Object.keys(spec.nodes).map((id,i)=>[id,[35,15+i*118,850,98]]));
+    spec.annotations.forEach((label,i)=>text('annotation-'+i,label,960,46+i*118,500,27,'#17615f'));
+  } else if(spec.layout==='session-and-files') {
+    pos={session:[30,30,560,145],summary:[880,30,560,145],files:[30,330,560,145],next:[880,330,560,145]};
+  } else if(spec.layout==='harness-controls') {
+    pos={guidance:[30,15,400,135],model:[30,310,400,135],policy:[560,310,400,135],tools:[1090,310,400,135],result:[1090,15,400,135]};
+    text('before',spec.annotations[0],520,210,480,25,'#17615f');text('after',spec.annotations[1],1010,485,550,25,'#536460');
+  } else if(spec.layout==='first-run-roadmap') {
+    pos={choose:[30,15,400,145],prepare:[560,15,400,145],spec:[1090,15,400,145],run:[1090,310,400,145],verify:[560,310,400,145],save:[30,310,400,145]};
+  } else {
+    pos={base:[530,5,440,145],learning:[0,350,440,145],project:[530,350,440,145],research:[1060,350,440,145]};
+  }
+  if(Object.keys(pos).sort().join()!==Object.keys(spec.nodes).sort().join())throw new Error('Неверные узлы '+spec.layout);
+  for(const [id,[x,y,w,h]] of Object.entries(pos)) {
+    const n=spec.nodes[id];
+    elements.push({...base(id),type:'rectangle',x,y,width:w,height:h,roundness:{type:3},backgroundColor:n.accent?'#dfeeea':'#f1f5f2'});
+    const title=wrap(n.title,spec.layout==='dependency-stack'?50:25),detail=wrap(n.detail,spec.layout==='dependency-stack'?65:30);
+    text(id+'-title',title,x+14,y+16,w-28,30);
+    text(id+'-detail',detail,x+14,y+(title.includes('\n')?86:64),w-28,spec.layout==='dependency-stack'?24:25,'#536460');
+  }
+  for(const e of spec.connections) {
+    const a=pos[e.from],b=pos[e.to];if(!a||!b)throw new Error('Неверная связь');
+    let x,y,points;
+    if(spec.layout==='personal-environment') {
+      x=a[0]+a[2]/2;y=a[1]+a[3]+8;
+      points=[[0,0],[0,95],[b[0]+b[2]/2-x,95],[b[0]+b[2]/2-x,b[1]-y-8]];
+      if(e.to==='project')points=[[0,0],[0,b[1]-y-8]];
+    } else if(spec.layout==='harness-controls'&&e.from==='result'&&e.to==='model') {
+      x=a[0]-8;y=a[1]+a[3]/2;
+      points=[[0,0],[-322,0],[-322,112.5],[-852,112.5],[-852,b[1]-y-8]];
+    } else if(a[1]===b[1]) {
+      const right=b[0]>a[0];x=a[0]+(right?a[2]+8:-8);y=a[1]+a[3]/2;
+      points=[[0,0],[b[0]+(right?-8:b[2]+8)-x,0]];
+    } else if(a[0]===b[0]) {
+      const down=b[1]>a[1];x=a[0]+a[2]/2;y=a[1]+(down?a[3]+8:-8);
+      points=[[0,0],[0,b[1]+(down?-8:b[3]+8)-y]];
+    } else throw new Error('Для связи нужен отдельный маршрут: '+e.from+':'+e.to);
+    elements.push({...base('edge-'+e.from+'-'+e.to),type:'arrow',x,y,points,strokeColor:'#17615f',strokeWidth:2.3,roughness:.45,startArrowhead:null,endArrowhead:'arrow',start:{id:e.from},end:{id:e.to}});
   }
   return elements;
 }

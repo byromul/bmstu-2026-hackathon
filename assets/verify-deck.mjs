@@ -33,8 +33,11 @@ await send('Page.navigate',{url:pathToFileURL(path.join(root,'lecture.html')).hr
 await new Promise(r=>setTimeout(r,500));
 const dir=path.join(root,'assets/preview');await mkdir(dir,{recursive:true});
 const reports=[];
-for(let i=1;i<=10;i++){
- await send('Runtime.evaluate',{expression:`location.hash='slide-${String(i).padStart(2,'0')}'`});
+const slideIds=(await send('Runtime.evaluate',{expression:"[...document.querySelectorAll('.slide')].map(s=>s.id)",returnByValue:true})).result.value;
+if(!slideIds?.length) throw new Error('Нет слайдов для проверки');
+for(const [offset,slideId] of slideIds.entries()){
+ const i=offset+1;
+ await send('Runtime.evaluate',{expression:`location.hash=${JSON.stringify(slideId)}`});
  await new Promise(r=>setTimeout(r,100));
  const report=await send('Runtime.evaluate',{expression:`(()=>{const s=document.querySelector('.slide.active'); const body=s.querySelector('.body');const footer=s.querySelector('.sources').getBoundingClientRect();const bounds=body.getBoundingClientRect();let out=[];for(const e of body.querySelectorAll('*')){if(!e.textContent.trim()&&e.tagName!=='IMG')continue;const r=e.getBoundingClientRect();if(r.bottom>footer.top-10||r.right>1536||r.left<56)out.push({tag:e.tagName,text:e.textContent.slice(0,65),x:r.x,y:r.y,right:r.right,bottom:r.bottom});}return {title:s.querySelector('h1').textContent,images:[...s.querySelectorAll('img')].map(i=>({artifact:i.dataset.artifact,loaded:i.complete&&i.naturalWidth>0})),bodyHeight:bounds.height,scrollHeight:body.scrollHeight,footerTop:footer.top,overflow:out};})()`,returnByValue:true});
  reports.push({slide:i,...report.result.value});
@@ -45,6 +48,10 @@ await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Home',code:'Home'});awa
 let first=(await send('Runtime.evaluate',{expression:"document.querySelector('.slide.active').id",returnByValue:true})).result.value;
 await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight'});
 let second=(await send('Runtime.evaluate',{expression:"document.querySelector('.slide.active').id",returnByValue:true})).result.value;
+await send('Input.dispatchKeyEvent',{type:'keyDown',key:'End',code:'End'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'End',code:'End'});
+let last=(await send('Runtime.evaluate',{expression:"document.querySelector('.slide.active').id",returnByValue:true})).result.value;
+await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Home',code:'Home'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Home',code:'Home'});
+await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight'});
 await send('Input.dispatchKeyEvent',{type:'keyDown',key:'n',code:'KeyN'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'n',code:'KeyN'});
 let notes=(await send('Runtime.evaluate',{expression:"document.body.classList.contains('notes-on') && document.querySelector('.note.active h2').textContent.startsWith('02.')",returnByValue:true})).result.value;
 await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape'});
@@ -52,10 +59,12 @@ await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape'})
   const network=requests.filter(url=>/^https?:/.test(url));
   const report={date:new Date().toISOString(),chrome:(await send('Browser.getVersion')).product,
     offline:true,reports,errors,resources:requests.map(url=>url.startsWith('data:')?'embedded image':url.startsWith('file:')?'local lecture.html':url),
-    keys:{first,second,notes}};
+    keys:{first,second,last,notes}};
   await writeFile(path.join(dir,'report.json'),JSON.stringify(report,null,2)+'\n');
+  const cards=reports.map(r=>`<a href="slide-${String(r.slide).padStart(2,'0')}.png"><img loading="lazy" src="slide-${String(r.slide).padStart(2,'0')}.png" alt="Слайд ${r.slide}"><span>${String(r.slide).padStart(2,'0')}. ${r.title.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}</span></a>`).join('');
+  await writeFile(path.join(dir,'index.html'),`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Теоретическая часть — превью</title><style>body{margin:32px;background:#fafaf7;color:#18272d;font:18px Arial,sans-serif}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}a{color:#17615f}img{width:100%;border:1px solid #ccd7d9}span{display:block;margin-top:8px}h1{font-size:32px}</style><h1>Теоретическая часть: ${reports.length} слайдов</h1><p>Превью автономного HTML. <a href="../../lecture.html">Открыть презентацию</a></p><main>${cards}</main></html>`);
   console.log(JSON.stringify({slides:reports.length,overflow:reports.filter(r=>r.overflow.length),errors,network,keys:report.keys},null,2));
-  if(network.length||errors.length||reports.some(r=>r.overflow.length||r.images.some(i=>!i.loaded))||first!=='slide-01'||second!=='slide-02'||!notes)throw new Error('Проверка презентации не пройдена; см. assets/preview/report.json');
+  if(network.length||errors.length||reports.some(r=>r.overflow.length||r.images.some(i=>!i.loaded))||first!==slideIds[0]||second!==slideIds[1]||last!==slideIds.at(-1)||!notes)throw new Error('Проверка презентации не пройдена; см. assets/preview/report.json');
 }finally{
   socket?.close();
   if(proc.exitCode===null){proc.kill('SIGTERM');await Promise.race([new Promise(r=>proc.once('exit',r)),pause(3000)]);}

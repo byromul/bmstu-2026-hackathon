@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-08",
+  "model_for_tokenizer": "gpt-4o",
+  "encoding": "o200k_base",
+  "tiktoken": "0.12.0",
+  "python": "3.14.7",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "method": "encode_ordinary; text only; no chat envelope, API or model execution",
+  "texts": {
+    "ru": {
+      "text": "Добавь в Python-проект импорт оценок из CSV. Меняй только модуль импорта и его тесты. Не добавляй зависимости. Пустой файл должен вызывать понятную ошибку. Запусти проверки и покажи результаты.",
+      "sha256": "587f5dd4792b584e8bd08734d04f1cae4a06e8aa88e2e38347e1d96a94a249ac",
+      "tokens": 52
+    },
+    "en": {
+      "text": "Add CSV grade import to the Python project. Change only the import module and its tests. Do not add dependencies. An empty file must produce a clear error. Run the checks and show the results.",
+      "sha256": "3c5788c6cd9c2a6f919d5dac79ec4a7dc769ca3219cb3981e10e75df504a271a",
+      "tokens": 40
+    }
+  }
+}
