@@ -19,26 +19,28 @@ BUG = '''def complete_task(tasks, task_id):
 
 
 def config(python):
+    def rule(action, resource, effect):
+        return {'action': action, 'resource': resource, 'effect': effect}
+    permissions = [rule('*', '*', 'deny')]
+    permissions += [rule(action, '*', 'allow') for action in ['read', 'glob', 'grep', 'list']]
+    permissions += [rule('edit', pattern, 'allow') for pattern in ['tasks.py', '*/tasks.py', 'review.md', '*/review.md']]
+    permissions += [rule('shell', '*', 'ask')]
+    permissions += [rule('shell', command, 'allow') for command in ['git status *', 'git diff *', 'python check.py', 'python -m unittest *']]
+    permissions += [rule('shell', command, 'deny') for command in ['git push *', 'git * push *']]
+    permissions += [rule('skill', 'review-change', 'allow'), rule('external_directory', '*', 'deny'),
+                    rule('mail_prepare_report', '*', 'allow'), rule('mail_list_inbox', '*', 'allow'),
+                    rule('mail_send_report', '*', 'ask')]
     return {'$schema': 'https://opencode.ai/config.json',
-            'model': 'lecture-glm/glm-4.7-flash', 'small_model': 'lecture-glm/glm-4.7-flash',
-            'provider': {'lecture-glm': {'npm': '@ai-sdk/openai-compatible', 'name': 'Z.ai — учебный API',
-                'options': {'baseURL': 'https://api.z.ai/api/paas/v4', 'apiKey': '{env:ZAI_API_KEY}'},
-                'models': {'glm-4.7-flash': {'name': 'GLM-4.7-Flash', 'tool_call': True,
-                    'limit': {'context': 200000, 'output': 4096},
-                    'options': {'thinking': {'type': 'disabled'}}}}}},
-            'share': 'disabled', 'autoupdate': False,
-            'plugin': ['./.opencode/plugins/guard.mjs'],
-            'permission': {
-                '*': 'deny', 'read': 'allow', 'glob': 'allow', 'grep': 'allow', 'list': 'allow',
-                'edit': {'*': 'allow', '.opencode/*': 'deny', '*/.opencode/*': 'deny',
-                         'check.py': 'deny', 'mail_mcp.py': 'deny', 'tests/*': 'deny'},
-                'bash': {'*': 'ask', 'git status*': 'allow', 'git diff*': 'allow',
-                         'python check.py': 'allow', 'python -m unittest*': 'allow',
-                         'git push*': 'deny', 'git * push*': 'deny'},
-                'skill': {'review-change': 'allow'}, 'external_directory': 'deny',
-                'mail_prepare_report': 'allow', 'mail_list_inbox': 'allow', 'mail_send_report': 'ask'},
-            'mcp': {'mail': {'type': 'local', 'command': [str(python), 'mail_mcp.py'],
-                             'enabled': True, 'timeout': 15000, 'environment': {'ZAI_API_KEY': ''}}}}
+            'model': 'lecture-glm/glm-4.5-flash', 'small_model': 'lecture-glm/glm-4.5-flash',
+            'providers': {'lecture-glm': {'package': '@opencode/ai/providers/openai-compatible',
+                'name': 'Z.ai — учебный API', 'env': ['ZAI_API_KEY'],
+                'settings': {'baseURL': 'https://api.z.ai/api/paas/v4', 'apiKey': '{env:ZAI_API_KEY}'},
+                'models': {'glm-4.5-flash': {'name': 'GLM-4.5-Flash',
+                    'limit': {'context': 128000, 'output': 4096},
+                    'settings': {'thinking': {'type': 'disabled'}}}}}},
+            'permissions': permissions,
+            'mcp': {'servers': {'mail': {'type': 'local', 'command': [str(python), 'mail_mcp.py'],
+                'environment': {'ZAI_API_KEY': ''}, 'codemode': False, 'timeout': 15000}}}}
 
 
 def main():
@@ -69,7 +71,7 @@ def main():
                 ['git', '-c', 'user.name=Lecture Demo', '-c', 'user.email=demo@example.test',
                  'commit', '-qm', 'Исходное состояние учебного проекта']]:
         subprocess.run(cmd, cwd=dest, check=True)  # nosec B603
-    print(f'Учебный репозиторий: {dest}\nСостояние: {args.state}\nOpenCode: 1.14.48, формат V1')
+    print(f'Учебный репозиторий: {dest}\nСостояние: {args.state}\nOpenCode: 2.2.6, формат V2')
     print('Начальная версия сохранена локально; внешнего remote нет.')
 
 

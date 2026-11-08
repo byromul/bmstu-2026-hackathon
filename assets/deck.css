@@ -77,3 +77,9 @@
 .proxy-visual .artifact-image,.persistence-visual .artifact-image,.controls-visual .artifact-image,.roadmap-visual .artifact-image,.personal-visual .artifact-image{height:490px;max-height:490px}
 .lockin-visual .artifact-image{height:500px;max-height:500px}
 .proxy-visual .callout,.lockin-visual .callout,.persistence-visual .callout,.controls-visual .callout,.roadmap-visual .callout,.personal-visual .callout{font-size:33px;margin-top:18px}
+
+/* Пример лектора о календарной ошибке дополняет механизм LLM. */
+.llm-visual .artifact-image{height:400px}.llm-visual .body .asof{font-size:27px;line-height:1.3;margin:14px 0}.llm-visual .callout{font-size:34px}
+
+/* Практический блок: реальные интерфейсы и короткий вывод. */
+.demo-image .artifact-image{height:510px;max-height:510px}.demo-image .callout{font-size:32px;margin-top:18px}

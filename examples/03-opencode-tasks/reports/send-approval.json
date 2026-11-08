@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-08",
+  "request": {
+    "id": "per_1bbae9b86001643EOe6b5CgR8r",
+    "sessionID": "ses_e44597cffffedvDk14dm3CaVL3",
+    "action": "mail_send_report",
+    "resources": [
+      "*"
+    ],
+    "save": [
+      "*"
+    ],
+    "metadata": {
+      "input": {
+        "draft_id": "c25e65c1e0a74dcbbfea1ba79589e0ea",
+        "confirmation": "Отправить Боссу"
+      }
+    },
+    "source": {
+      "type": "tool",
+      "messageID": "msg_1bbae637a001uhj5xNATYOoRgC",
+      "id": "call_d4a33f73ae1f4701b843a6ad"
+    }
+  },
+  "decision": "once",
+  "authority": "Пользователь согласовал локальный учебный Mailpit; подготовительный клиент подтвердил конкретный просмотренный черновик. На лекции подтверждение выполняет лектор вручную.",
+  "external_delivery": false
+}

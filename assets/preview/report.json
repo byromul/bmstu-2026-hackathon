@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T13:35:45.833Z",
+  "date": "2026-11-08T15:19:16.208Z",
   "chrome": "Chrome/156.0.8078.80",
   "offline": true,
   "reports": [
@@ -36,7 +36,7 @@
         }
       ],
       "bodyHeight": 626,
-      "scrollHeight": 626,
+      "scrollHeight": 637,
       "footerTop": 845,
       "overflow": []
     },
@@ -68,7 +68,7 @@
         }
       ],
       "bodyHeight": 626,
-      "scrollHeight": 626,
+      "scrollHeight": 658,
       "footerTop": 872,
       "overflow": []
     },
@@ -92,7 +92,7 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
+      "footerTop": 872,
       "overflow": []
     },
     {
@@ -312,12 +312,143 @@
     {
       "slide": 30,
       "title": "Какую среду вы соберёте для себя",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 31,
+      "title": "Практика: завершаем задачу по ID",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 32,
+      "title": "Что установить до занятия",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 820.109375,
+      "overflow": []
+    },
+    {
+      "slide": 33,
+      "title": "Сначала спецификация и план",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 34,
+      "title": "AGENTS.md именно этого проекта",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 35,
+      "title": "Разрешить, спросить или отказать",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 36,
+      "title": "Хук до выполнения команды",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 37,
+      "title": "MCP готовит почту к работе",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 38,
+      "title": "Агент реализует один небольшой шаг",
       "images": [
         {
-          "artifact": "ART-0031",
+          "artifact": "ART-0047",
           "loaded": true
         }
       ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 39,
+      "title": "Код запустился, задача не выполнена",
+      "images": [],
+      "bodyHeight": 603,
+      "scrollHeight": 603,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 40,
+      "title": "Создаём и применяем skill ревью",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 41,
+      "title": "Приёмка: код, проверки и поведение",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 42,
+      "title": "Письмо Боссу: от черновика до входящих",
+      "images": [
+        {
+          "artifact": "ART-0048",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 43,
+      "title": "Что осталось после рабочей сессии",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 44,
+      "title": "Вопросы и самостоятельное повторение",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 872,
@@ -336,12 +467,13 @@
     "embedded image",
     "embedded image",
     "embedded image",
+    "embedded image",
     "embedded image"
   ],
   "keys": {
     "first": "slide-01",
     "second": "slide-02",
-    "last": "slide-30",
+    "last": "slide-44",
     "notes": true
   }
 }

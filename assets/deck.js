@@ -23,12 +23,12 @@
     document.querySelector('#previous').disabled = index === 0;
     document.querySelector('#next').disabled = index === slides.length - 1;
     document.querySelector('#live-status').textContent = `Слайд ${index + 1}: ${slides[index].querySelector('h1').textContent}`;
-    if (updateHash) history.replaceState(null, '', `#slide-${String(index + 1).padStart(2, '0')}`);
+    if (updateHash) history.replaceState(null, '', `#${slides[index].id}`);
     document.querySelector('.notes-panel').scrollTop = 0;
   }
   function fromHash() {
-    const n = Number(location.hash.replace('#slide-', ''));
-    show(Number.isFinite(n) && n > 0 ? n - 1 : 0, false);
+    const n = slides.findIndex(slide => '#'+slide.id === location.hash);
+    show(n >= 0 ? n : 0, false);
   }
   function toggleNotes() {
     document.body.classList.toggle('notes-on');

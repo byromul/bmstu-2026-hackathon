@@ -1,0 +1,16 @@
+LOADED OpenCode 2.2.6
+ALLOW python -m unittest discover -s tests -v
+ALLOW python -m unittest discover -s tests -v
+ALLOW python check.py
+ALLOW git diff
+LOADED OpenCode 2.2.6
+ALLOW python check.py
+ALLOW git diff
+LOADED OpenCode 2.2.6
+ALLOW git diff -- tasks.py app.py tests
+ALLOW python check.py
+LOADED OpenCode 2.2.6
+LOADED OpenCode 2.2.6
+ALLOW git status --short
+DENY git push
+ALLOW python check.py

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-08",
+  "opencode": "2.2.6",
+  "mechanism": "реальный API permission.create, команды не исполнялись",
+  "results": {
+    "allow": {
+      "data": {
+        "id": "per_1bba84f530011B32b4lNVyBYQf",
+        "effect": "allow"
+      }
+    },
+    "deny": {
+      "data": {
+        "id": "per_1bba84f55001vovTPLNKgF17xl",
+        "effect": "deny"
+      }
+    },
+    "ask": {
+      "data": {
+        "id": "per_1bba84f56001hctGc5jOf9JelB",
+        "effect": "ask"
+      }
+    }
+  },
+  "ask_replied": "reject"
+}

@@ -1,0 +1,40 @@
+diff --git a/tasks.py b/tasks.py
+index 493bd6e..5cd09de 100644
+--- a/tasks.py
++++ b/tasks.py
+@@ -5,8 +5,17 @@ import tempfile
+ 
+ 
+ def complete_task(tasks, task_id):
+-    """Завершение ещё предстоит реализовать агенту."""
+-    raise NotImplementedError('Реализуйте по SPEC.md')
++    """Завершить задачу по ID. ID — идентификатор, а не позиция в списке."""
++    if type(task_id) is not int:
++        raise ValueError('ID должен быть целым числом')
++    
++    for task in tasks:
++        if task['id'] == task_id:
++            if not task['done']:
++                task['done'] = True
++            return task
++    
++    raise KeyError(f'Задача с ID {task_id} не найдена')
+ 
+ 
+ class Store:
+diff --git a/tests/test_tasks.py b/tests/test_tasks.py
+index cd9deb4..d94c975 100644
+--- a/tests/test_tasks.py
++++ b/tests/test_tasks.py
+@@ -23,8 +23,9 @@ class TaskChecks(unittest.TestCase):
+ 
+     def test_unknown_id_does_not_change_data(self):
+         before = copy.deepcopy(self.tasks)
+-        with self.assertRaises(KeyError):
+-            complete_task(self.tasks, 99)
++        for unknown_id in [0, 99]:
++            with self.assertRaises(KeyError):
++                complete_task(self.tasks, unknown_id)
+         self.assertEqual(self.tasks, before)
+ 
+     def test_repeated_completion_is_safe(self):

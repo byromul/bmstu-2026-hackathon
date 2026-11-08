@@ -1,0 +1,3 @@
+# Сырые результаты модели сохраняют исходные пробелы, включая контекст patch.
+examples/03-opencode-tasks/reports/agent-change.patch -whitespace
+examples/03-opencode-tasks/reports/agent-review.md -whitespace

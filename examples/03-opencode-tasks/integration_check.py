@@ -2,6 +2,7 @@
 import asyncio
 import json
 import os
+import socket
 from pathlib import Path
 import subprocess
 import sys
@@ -63,6 +64,11 @@ def main():
     binary = os.environ.get('MAILPIT_BIN', 'mailpit')
     report = {'date': '2026-11-08', 'checks': {}}
     processes = []
+    # Не использовать случайно уже работающий чужой приёмник или приложение.
+    for port in [8025, 1025, 18080]:
+        with socket.socket() as probe:
+            if probe.connect_ex(('127.0.0.1', port)) == 0:
+                raise RuntimeError(f'Порт {port} занят; проверка не запущена')
     with tempfile.TemporaryDirectory(prefix='lecture-integration-') as tmp:
         tmp = Path(tmp)
         with (tmp/'services.log').open('w') as log:
@@ -74,6 +80,8 @@ def main():
                     env={k: os.environ[k] for k in ['PATH', 'TMPDIR'] if k in os.environ})  # nosec B603
                 processes.append(mail)
                 wait_ready('http://127.0.0.1:8025/api/v1/messages')
+                if mail.poll() is not None:
+                    raise RuntimeError('Запущенный Mailpit завершился до проверки')
                 app = subprocess.Popen([sys.executable, 'app.py', '--port', '18080', '--data', str(tmp/'tasks.json')], cwd=ROOT, stdout=log, stderr=log)  # nosec B603
                 processes.append(app)
                 wait_ready('http://127.0.0.1:18080/api/tasks')
@@ -83,18 +91,19 @@ def main():
                 assert [t['done'] for t in initial] == [False, False]
                 assert [t['done'] for t in result] == [True, False]
                 request('http://127.0.0.1:18080/api/tasks/1/complete', 'POST')
-                try:
-                    request('http://127.0.0.1:18080/api/tasks/999/complete', 'POST')
-                    raise AssertionError('Ожидался 404')
-                except HTTPError as error:
-                    assert error.code == 404
+                for unknown_id in [0, 999]:
+                    try:
+                        request(f'http://127.0.0.1:18080/api/tasks/{unknown_id}/complete', 'POST')
+                        raise AssertionError('Ожидался 404')
+                    except HTTPError as error:
+                        assert error.code == 404
                 assert request('http://127.0.0.1:18080/api/tasks') == result
                 app.terminate(); app.wait(timeout=5)
                 app = subprocess.Popen([sys.executable, 'app.py', '--port', '18080', '--data', str(tmp/'tasks.json')], cwd=ROOT, stdout=log, stderr=log)  # nosec B603
                 processes.append(app)
                 wait_ready('http://127.0.0.1:18080/api/tasks')
                 assert request('http://127.0.0.1:18080/api/tasks') == result
-                report['checks']['http'] = {'id_1_done': True, 'id_2_unchanged': True, 'unknown_404': True,
+                report['checks']['http'] = {'id_1_done': True, 'id_2_unchanged': True, 'unknown_404': [0, 999],
                                            'repeat_safe': True, 'persisted_after_restart': True}
                 report['checks']['mail'] = asyncio.run(mail_check())
             finally:

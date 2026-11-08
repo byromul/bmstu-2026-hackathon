@@ -4,7 +4,10 @@
     "http": {
       "id_1_done": true,
       "id_2_unchanged": true,
-      "unknown_404": true,
+      "unknown_404": [
+        0,
+        999
+      ],
       "repeat_safe": true,
       "persisted_after_restart": true
     },
@@ -18,13 +21,13 @@
       "draft_did_not_send": true,
       "first": {
         "status": "received_locally",
-        "mailpit_id": "580qRKAyaHGuaALAaU195L",
+        "mailpit_id": "5xKRwBKJ4lMOSez1Qhbram",
         "subject": "Учебная задача: отметка выполнена",
         "recipient": "boss@example.test"
       },
       "repeat": {
         "status": "already_received_locally",
-        "mailpit_id": "580qRKAyaHGuaALAaU195L",
+        "mailpit_id": "5xKRwBKJ4lMOSez1Qhbram",
         "subject": "Учебная задача: отметка выполнена",
         "recipient": "boss@example.test"
       },
@@ -34,5 +37,5 @@
       "external_delivery": false
     }
   },
-  "service_log": "time=\"2026/11/08 17:28:42\" level=info msg=\"[smtp] only allowing recipients matching regexp: ^boss@example\\\\.test$\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[smtpd] starting on 127.0.0.1:1025 (no encryption)\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[host] allowed Host headers: 127.0.0.1, ::1, localhost\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[http] starting on 127.0.0.1:8025\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[http] accessible via http://127.0.0.1:8025/\"\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/999/complete HTTP/1.1\" 404 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n[db] got terminated signal, shutting down\n"
+  "service_log": "time=\"2026/11/08 18:09:49\" level=info msg=\"[smtp] only allowing recipients matching regexp: ^boss@example\\\\.test$\"\ntime=\"2026/11/08 18:09:49\" level=info msg=\"[smtpd] starting on 127.0.0.1:1025 (no encryption)\"\ntime=\"2026/11/08 18:09:49\" level=info msg=\"[host] allowed Host headers: 127.0.0.1, ::1, localhost\"\ntime=\"2026/11/08 18:09:49\" level=info msg=\"[http] starting on 127.0.0.1:8025\"\ntime=\"2026/11/08 18:09:49\" level=info msg=\"[http] accessible via http://127.0.0.1:8025/\"\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"POST /api/tasks/0/complete HTTP/1.1\" 404 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"POST /api/tasks/999/complete HTTP/1.1\" 404 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 18:09:49] \"GET /api/tasks HTTP/1.1\" 200 -\n[db] got terminated signal, shutting down\n"
 }

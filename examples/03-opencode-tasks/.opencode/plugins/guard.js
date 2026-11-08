@@ -1,4 +1,4 @@
-// OpenCode 1.14.48: V1 plugin API. Проверка до запуска bash.
+// OpenCode V2: переиспользуем plugin API готового harness.
 import {appendFile, mkdir} from 'node:fs/promises';
 import path from 'node:path';
 export function checkCommand(command) {
@@ -6,15 +6,25 @@ export function checkCommand(command) {
   // Учебный барьер; не анализатор всего shell и не системная граница сети.
   if (/\bgit\b[^\n;&|]*\bpush\b/i.test(command)) throw new Error('DEMO_GUARD: git push запрещён до выполнения');
 }
-export default async ({directory}) => ({
-  'tool.execute.before': async (input, output) => {
-    if (input.tool !== 'bash') return;
-    const command = output.args.command;
+export function createGuard(directory) {
+  return async event => {
+    if (event.tool !== 'shell') return;
+    const command = event.input.command;
     await mkdir(path.join(directory, '.lab'), {recursive:true});
     try {checkCommand(command);} catch(error) {
       await appendFile(path.join(directory, '.lab/guard.log'), `DENY ${command}\n`);
       throw error;
     }
     await appendFile(path.join(directory, '.lab/guard.log'), `ALLOW ${command}\n`);
+  };
+}
+export default {
+  id: 'lecture-guard',
+  async setup(ctx) {
+    const directory=ctx.location.directory;
+    await mkdir(path.join(directory, '.lab'), {recursive:true});
+    await appendFile(path.join(directory, '.lab/guard.log'), `LOADED OpenCode ${ctx.app.version}\n`);
+    const registration=await ctx.tool.hook('execute.before',createGuard(directory));
+    return ()=>registration.dispose();
   },
-});
+};

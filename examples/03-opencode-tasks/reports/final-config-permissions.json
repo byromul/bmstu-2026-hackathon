@@ -1,0 +1,22 @@
+{
+  "opencode": "2.2.6",
+  "rules": [
+    {
+      "resource": "tasks.py",
+      "effect": "allow"
+    },
+    {
+      "resource": "/private/tmp/lecture-final-ready/tasks.py",
+      "effect": "allow"
+    },
+    {
+      "resource": "tests/test_tasks.py",
+      "effect": "deny"
+    },
+    {
+      "resource": "opencode.json",
+      "effect": "deny"
+    }
+  ],
+  "note": "Проверено после загрузки новой локации; первый холодный запрос дал отказ, до готовности конфигурации нужно ждать."
+}

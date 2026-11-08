@@ -23,8 +23,9 @@ class TaskChecks(unittest.TestCase):
 
     def test_unknown_id_does_not_change_data(self):
         before = copy.deepcopy(self.tasks)
-        with self.assertRaises(KeyError):
-            complete_task(self.tasks, 99)
+        for unknown_id in [0, 99]:
+            with self.assertRaises(KeyError):
+                complete_task(self.tasks, unknown_id)
         self.assertEqual(self.tasks, before)
 
     def test_repeated_completion_is_safe(self):

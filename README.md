@@ -10,7 +10,9 @@
 | [AGENTS.md](AGENTS.md) | Прочитать правила работы над репозиторием |
 | [slides.md](slides.md) | Работать с единым файлом презентации |
 | [script.md](script.md) | Работать с единым сценарием лектора |
-| [lecture.html](lecture.html) | Открыть собранную презентацию в Chrome |
+| [lecture.html](lecture.html) | Открыть все 44 слайда в Chrome |
+| [Теория](lecture-theory.html) / [практика](lecture-practice.html) | Показать каждый блок отдельно |
+| [Практический проект](examples/03-opencode-tasks/README.md) | Повторить демо с OpenCode v2, GLM и Mailpit |
 | [build.py](build.py) | Пересобрать HTML без сторонних библиотек |
 | [examples/](examples/README.md) | Найти демонстрационный проект и инструкции повторения |
 | [assets/](assets/README.md) | Найти визуал и порядок его подготовки |
@@ -27,6 +29,8 @@
 
 ```sh
 python3 build.py
+python3 build.py --block 1 --output lecture-theory.html
+python3 build.py --block 2 --output lecture-practice.html
 ```
 
 Нужен Python 3.10 или новее. Сборка бесплатна: скрипт использует только стандартную библиотеку, не обращается к моделям или сети. Откройте [lecture.html](lecture.html) в Google Chrome. Установка пакетов и локальный сервер не нужны.
@@ -49,4 +53,4 @@ python3 -B assets/test_build.py
 node assets/verify-deck.mjs
 ```
 
-Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверенный текущий объём — 30 слайдов теории; приложение и практические настройки пока не подготовлены.
+Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 44 слайда без сети и 21 тест конвертора. Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.

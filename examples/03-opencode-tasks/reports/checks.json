@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "source_hashes": {
+    "tasks.py": "9f07bf65517faa8943c91e0e5ffc06c00c464ad5b577ad9b1ab4191df1693a91",
+    "app.py": "4e948f5b5f9d5df707890cac7164384e34430c6b224c092d214f926a9a50115f",
+    "mail_mcp.py": "6108c33bf9c6f5918bd1f8fda97701454be287c7170c59c50d1ec6b944827715",
+    "tests/test_mail.py": "e042ec8ccc7b7570f089dd0b3232ac8d50eac8e16533774e1346bae27834790b",
+    "tests/test_tasks.py": "39da3f3c0c19e0e254e518af4f266d17051248b557cc9713bf55cc0268c61dbf"
+  },
+  "python": "3.14.7",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_confirmation_is_required_before_any_send (test_mail.MailChecks.test_confirmation_is_required_before_any_send) ... ok\ntest_draft_is_blocked_before_checks (test_mail.MailChecks.test_draft_is_blocked_before_checks) ... ok\ntest_failed_checks_block_draft (test_mail.MailChecks.test_failed_checks_block_draft) ... ok\ntest_received_delivery_returns_existing_message (test_mail.MailChecks.test_received_delivery_returns_existing_message) ... ok\ntest_unknown_delivery_is_not_retried (test_mail.MailChecks.test_unknown_delivery_is_not_retried) ... ok\ntest_change_survives_reopening_store (test_tasks.TaskChecks.test_change_survives_reopening_store) ... ok\ntest_id_one_is_not_index_one (test_tasks.TaskChecks.test_id_one_is_not_index_one) ... ok\ntest_invalid_id_is_rejected_without_changes (test_tasks.TaskChecks.test_invalid_id_is_rejected_without_changes) ... ok\ntest_repeated_completion_is_safe (test_tasks.TaskChecks.test_repeated_completion_is_safe) ... ok\ntest_selected_id_changes_and_other_does_not (test_tasks.TaskChecks.test_selected_id_changes_and_other_does_not) ... ok\ntest_task_title_is_escaped_in_html (test_tasks.TaskChecks.test_task_title_is_escaped_in_html) ... ok\ntest_unknown_id_does_not_change_data (test_tasks.TaskChecks.test_unknown_id_does_not_change_data) ... ok\ntest_unknown_id_does_not_rewrite_file (test_tasks.TaskChecks.test_unknown_id_does_not_rewrite_file) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "tasks.py",
+        "app.py",
+        "mail_mcp.py",
+        "tests"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "bandit",
+        "-q",
+        "tasks.py",
+        "app.py",
+        "mail_mcp.py"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "limits": "Автоматические проверки; браузер и решение человека о приёмке отдельно."
+}

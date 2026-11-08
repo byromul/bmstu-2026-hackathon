@@ -132,7 +132,7 @@ class ResourceCheck(HTMLParser):
                 raise ValueError(f"Внешний ресурс в HTML: {tag} {key}={value}")
 
 
-def build(source, notes_path, output, registry=REGISTRY):
+def build(source, notes_path, output, registry=REGISTRY, selected_block=None):
     if output in (source, notes_path, ROOT/'assets/deck.css', ROOT/'assets/deck.js', ROOT/'assets/render_elements.py', registry, Path(__file__).resolve()):
         raise ValueError('Результат сборки не должен перезаписывать исходники')
     slides = sections(source.read_text(encoding='utf-8'))
@@ -145,12 +145,23 @@ def build(source, notes_path, output, registry=REGISTRY):
         raise ValueError('CSS должен быть автономным: @import и url() запрещены')
     seen_urls = set(); rendered = []; note_blocks = []
     previous_end = 0
+    previous_block = 1
+    total_seconds = 0
+    rendered_count = 0
     for (number, title, body), (_, _, note) in zip(slides, notes):
         meta_match = re.search(r'^```slide\n(.*?)\n```', body, re.M | re.S)
         if not meta_match:
             raise ValueError(f'Слайд {number}: нужен блок slide с layout и time')
         meta = elements.object_data(meta_match[1])
-        elements.check_fields(meta, {'layout', 'time', 'footer_note'}, {'layout', 'time'})
+        elements.check_fields(meta, {'layout', 'time', 'footer_note', 'block'}, {'layout', 'time'})
+        block_number = meta.get('block', 1)
+        if type(block_number) is not int or block_number not in (1, 2):
+            raise ValueError('block: допустимы 1 и 2')
+        if block_number != previous_block:
+            if block_number != previous_block + 1:
+                raise ValueError('Блоки должны идти по порядку')
+            previous_end = 0
+            previous_block = block_number
         layout = meta['layout']
         if not re.fullmatch(r'[a-z-]+', layout):
             raise ValueError('Некорректное имя layout')
@@ -163,6 +174,10 @@ def build(source, notes_path, output, registry=REGISTRY):
             raise ValueError(f'Слайд {number}: разрыв тайминга')
         body = body[:meta_match.start()] + body[meta_match.end():]
         previous_end = end
+        if selected_block is not None and block_number != selected_block:
+            continue
+        total_seconds += end-start
+        rendered_count += 1
         refs = re.findall(r'^Источники: (.+)$', body, re.M)
         for url in re.findall(r'\]\((https?://[^)]+)\)', body):
             if url in seen_urls: raise ValueError(f'Повтор ссылки в слайдах: {url}')
@@ -172,16 +187,18 @@ def build(source, notes_path, output, registry=REGISTRY):
         source_html = inline(' · '.join(refs), registry)
         if meta.get('footer_note'):
             source_html = f'<span class="footer-note">{html.escape(meta["footer_note"])}</span>' + source_html
-        rendered.append(f'<section class="slide {layout}" id="slide-{number:02d}" aria-labelledby="title-{number:02d}" data-seconds="{end-start}"><h1 id="title-{number:02d}">{html.escape(title)}</h1><div class="body">{rendered_body}</div><footer class="sources">{source_html}</footer><div class="page">{number:02d}</div></section>')
+        rendered.append(f'<section class="slide {layout}" id="slide-{number:02d}" aria-labelledby="title-{number:02d}" data-block="{block_number}" data-seconds="{end-start}"><h1 id="title-{number:02d}">{html.escape(title)}</h1><div class="body">{rendered_body}</div><footer class="sources">{source_html}</footer><div class="page">{number:02d}</div></section>')
         note_html = markdown(note, registry)
         note_blocks.append(f'<section class="note"><h2>{number:02d}. {html.escape(title)}</h2>{note_html}</section>')
+    if not rendered_count:
+        raise ValueError('В выбранном блоке нет слайдов')
     markup = f'''<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Использование ИИ-агентов для быстрого программирования</title><style>{css}</style></head>
 <body><main id="stage" aria-label="Презентация">{''.join(rendered)}</main><aside class="notes-panel" aria-label="Сценарий лектора">{''.join(note_blocks)}</aside><nav id="controls" aria-label="Управление презентацией"><button id="previous" aria-label="Предыдущий слайд">←</button><span id="counter"></span><button id="next" aria-label="Следующий слайд">→</button><button id="fullscreen" aria-label="Полноэкранный режим">⛶</button></nav><div id="live-status" aria-live="polite"></div><script>{js}</script></body></html>'''
     ResourceCheck().feed(markup)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(markup, encoding='utf-8')
-    print(f'Собрано {len(slides)} слайдов, {previous_end//60}:{previous_end%60:02d} по плану: {output}')
+    print(f'Собрано {rendered_count} слайдов, {total_seconds//60}:{total_seconds%60:02d} по плану: {output}')
 
 
 def main():
@@ -190,8 +207,9 @@ def main():
     parser.add_argument('--notes', type=Path, default=ROOT/'script.md')
     parser.add_argument('--artifacts', type=Path, default=REGISTRY)
     parser.add_argument('--output', type=Path, default=ROOT/'lecture.html')
+    parser.add_argument('--block', type=int, choices=(1, 2), help='Собрать один самостоятельный блок')
     args = parser.parse_args()
-    try: build(args.source.resolve(), args.notes.resolve(), args.output.resolve(), args.artifacts.resolve())
+    try: build(args.source.resolve(), args.notes.resolve(), args.output.resolve(), args.artifacts.resolve(), args.block)
     except (OSError, ValueError) as error:
         print(f'Ошибка сборки: {error}', file=sys.stderr); return 1
     return 0

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-08",
+  "model_send": "GLM-4.5-Flash → OpenCode 2.2.6 → MCP → SMTP → Mailpit",
+  "native_approval": "once for the inspected draft",
+  "before_count": 2,
+  "repeat_by": "official MCP SDK, same draft after model send",
+  "repeat": {
+    "status": "already_received_locally",
+    "mailpit_id": "3MGUFCbsycSJGnhfoYXR1l",
+    "subject": "Учебная задача: отметка выполнена",
+    "recipient": "boss@example.test"
+  },
+  "after_count": 2,
+  "new_messages_on_repeat": 0,
+  "external_delivery": false
+}

@@ -1,0 +1,55 @@
+{
+  "passed": false,
+  "source_hashes": {
+    "tasks.py": "f78add253587ff74eb1a7744e03ff419d5bac0625fe7bf82cc6f63f2605b2f78",
+    "app.py": "4e948f5b5f9d5df707890cac7164384e34430c6b224c092d214f926a9a50115f",
+    "mail_mcp.py": "6108c33bf9c6f5918bd1f8fda97701454be287c7170c59c50d1ec6b944827715",
+    "tests/test_mail.py": "e042ec8ccc7b7570f089dd0b3232ac8d50eac8e16533774e1346bae27834790b",
+    "tests/test_tasks.py": "39da3f3c0c19e0e254e518af4f266d17051248b557cc9713bf55cc0268c61dbf"
+  },
+  "python": "3.14.7",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "output": "test_confirmation_is_required_before_any_send (test_mail.MailChecks.test_confirmation_is_required_before_any_send) ... ok\ntest_draft_is_blocked_before_checks (test_mail.MailChecks.test_draft_is_blocked_before_checks) ... ok\ntest_failed_checks_block_draft (test_mail.MailChecks.test_failed_checks_block_draft) ... ok\ntest_received_delivery_returns_existing_message (test_mail.MailChecks.test_received_delivery_returns_existing_message) ... ok\ntest_unknown_delivery_is_not_retried (test_mail.MailChecks.test_unknown_delivery_is_not_retried) ... ok\ntest_change_survives_reopening_store (test_tasks.TaskChecks.test_change_survives_reopening_store) ... FAIL\ntest_id_one_is_not_index_one (test_tasks.TaskChecks.test_id_one_is_not_index_one) ... FAIL\ntest_invalid_id_is_rejected_without_changes (test_tasks.TaskChecks.test_invalid_id_is_rejected_without_changes) ... FAIL\ntest_repeated_completion_is_safe (test_tasks.TaskChecks.test_repeated_completion_is_safe) ... ERROR\ntest_selected_id_changes_and_other_does_not (test_tasks.TaskChecks.test_selected_id_changes_and_other_does_not) ... ERROR\ntest_task_title_is_escaped_in_html (test_tasks.TaskChecks.test_task_title_is_escaped_in_html) ... ok\ntest_unknown_id_does_not_change_data (test_tasks.TaskChecks.test_unknown_id_does_not_change_data) ... FAIL\ntest_unknown_id_does_not_rewrite_file (test_tasks.TaskChecks.test_unknown_id_does_not_rewrite_file) ... ERROR\n\n======================================================================\nERROR: test_repeated_completion_is_safe (test_tasks.TaskChecks.test_repeated_completion_is_safe)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 32, in test_repeated_completion_is_safe\n    complete_task(self.tasks, 42)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/private/tmp/lecture-bug-final/tasks.py\", line 9, in complete_task\n    tasks[task_id]['done'] = True\n    ~~~~~^^^^^^^^^\nIndexError: list index out of range\n\n======================================================================\nERROR: test_selected_id_changes_and_other_does_not (test_tasks.TaskChecks.test_selected_id_changes_and_other_does_not)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 16, in test_selected_id_changes_and_other_does_not\n    complete_task(self.tasks, 42)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/private/tmp/lecture-bug-final/tasks.py\", line 9, in complete_task\n    tasks[task_id]['done'] = True\n    ~~~~~^^^^^^^^^\nIndexError: list index out of range\n\n======================================================================\nERROR: test_unknown_id_does_not_rewrite_file (test_tasks.TaskChecks.test_unknown_id_does_not_rewrite_file)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 58, in test_unknown_id_does_not_rewrite_file\n    store.complete(999)\n    ~~~~~~~~~~~~~~^^^^^\n  File \"/private/tmp/lecture-bug-final/tasks.py\", line 40, in complete\n    result = complete_task(tasks, task_id)\n  File \"/private/tmp/lecture-bug-final/tasks.py\", line 9, in complete_task\n    tasks[task_id]['done'] = True\n    ~~~~~^^^^^^^^^\nIndexError: list index out of range\n\n======================================================================\nFAIL: test_change_survives_reopening_store (test_tasks.TaskChecks.test_change_survives_reopening_store)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 49, in test_change_survives_reopening_store\n    self.assertTrue(Store(path).load()[0]['done'])\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n======================================================================\nFAIL: test_id_one_is_not_index_one (test_tasks.TaskChecks.test_id_one_is_not_index_one)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 22, in test_id_one_is_not_index_one\n    self.assertEqual([t['done'] for t in items], [True, False])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: [False, True] != [True, False]\n\nFirst differing element 0:\nFalse\nTrue\n\n- [False, True]\n+ [True, False]\n\n======================================================================\nFAIL: test_invalid_id_is_rejected_without_changes (test_tasks.TaskChecks.test_invalid_id_is_rejected_without_changes)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 40, in test_invalid_id_is_rejected_without_changes\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_unknown_id_does_not_change_data (test_tasks.TaskChecks.test_unknown_id_does_not_change_data)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/lecture-bug-final/tests/test_tasks.py\", line 27, in test_unknown_id_does_not_change_data\n    with self.assertRaises(KeyError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^\nAssertionError: KeyError not raised\n\n----------------------------------------------------------------------\nRan 13 tests in 0.004s\n\nFAILED (failures=4, errors=3)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "tasks.py",
+        "app.py",
+        "mail_mcp.py",
+        "tests"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "bandit",
+        "-q",
+        "tasks.py",
+        "app.py",
+        "mail_mcp.py"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "limits": "Автоматические проверки; браузер и решение человека о приёмке отдельно."
+}

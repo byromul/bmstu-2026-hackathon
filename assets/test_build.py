@@ -154,6 +154,29 @@ class BuildChecks(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Mermaid не подключён'):
             build.markdown('```mermaid\nflowchart LR\nA --> B\n```')
 
+    def second_block(self):
+        self.append('## Слайд 02. Практика\n\n'+block('slide', {'layout':'plain','time':'00:00–02:00','block':2})+'\nПрактический текст.\n')
+        self.notes.write_text(self.notes.read_text()+'\n## Слайд 02. Практика\n\nРечь.\n')
+
+    def test_second_block_has_independent_clock(self):
+        self.second_block()
+        result = self.compile()
+        self.assertIn('data-block="2" data-seconds="120"', result)
+
+    def test_selected_block_keeps_original_slide_id(self):
+        self.second_block()
+        build.build(self.source, self.notes, self.output, self.registry, selected_block=2)
+        result = self.output.read_text()
+        self.assertIn('id="slide-02"', result)
+        self.assertNotIn('id="slide-01"', result)
+        self.assertIn('slides.findIndex', result)
+
+    def test_clock_cannot_reset_without_block_transition(self):
+        self.second_block()
+        self.source.write_text(self.source.read_text().replace('"block": 2', '"block": 1'))
+        with self.assertRaisesRegex(ValueError, 'тайминга'):
+            self.compile()
+
 
 if __name__ == '__main__':
     unittest.main()
