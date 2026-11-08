@@ -31,12 +31,33 @@
 .compare .model-rows{margin-bottom:16px}.compare .return-path{margin-top:14px}
 .compare .body ul{font-size:28px;line-height:1.25;margin:8px 0 12px;padding-left:32px}
 .compare .body li{margin:4px 0}.compare .callout{font-size:34px;padding:14px 24px}
-.options .body{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:auto auto 1fr auto;gap:10px 38px}
-.options .body table{grid-column:1/-1;grid-row:1;margin:0 0 14px}
-.options .body>p:first-of-type{grid-column:1;grid-row:2;margin:0;font-size:29px}
-.options .body>ul{grid-column:1;grid-row:3;margin:0;padding-left:32px;font-size:29px;line-height:1.3}
-.options .body>ul li{margin:7px 0}
-.options .callout{grid-column:2;grid-row:2/4;align-self:start;margin:0;font-size:32px}
-.options .body>p:last-child{grid-column:1/-1;grid-row:4;font-size:27px;margin:0}
 .agent-loop .body .artifact-image{height:520px;max-height:520px;width:100%;object-fit:contain}
 .agent-loop .callout{font-size:34px}
+
+/* Все смысловые акценты занимают целую строку. */
+.callout{grid-column:1/-1;width:100%}
+.sdlc-visual .body>p:first-child,.llm-visual .body>p:first-child,.harness-visual .body>p:first-child{font-size:27px;color:var(--muted);margin:0 0 12px}
+.sdlc-visual .artifact-image{height:450px}
+.llm-visual .artifact-image{height:410px}
+.llm-visual .body>p:last-of-type{font-size:27px;margin:10px 0 0}
+.harness-visual .artifact-image{height:470px}
+.sdlc-visual .callout,.harness-visual .callout{font-size:33px;margin-top:16px}
+.llm-visual .callout{font-size:36px;margin-top:18px}
+.compare .model-row{padding:32px 0 40px;margin-bottom:22px}
+.compare .model-row .label{font-size:29px!important;margin-bottom:30px!important}
+.compare .callout{margin-top:32px}
+.options .body table{font-size:28px;margin:0 0 18px}
+.options .body th{padding-bottom:12px;font-size:22px}
+.options .body td{padding:13px 20px 13px 0}
+.options .body>p{font-size:27px;margin:0 0 8px}
+.options .body ul{list-style:none;padding:0;margin:0 0 18px;font-size:26px;line-height:1.3}
+.options .body li{position:relative;margin:0;padding:8px 0 8px 24px;border-bottom:1px solid var(--line)}
+.options .body li::before{content:'';position:absolute;left:0;top:16px;width:5px;height:18px;background:var(--blue);border-radius:2px}
+.options .body li strong{color:var(--blue)}
+.options .callout{font-size:32px;margin:0;padding:17px 24px}
+
+/* Сравнение режимов с пояснением об инструментах. */
+.compare .model-row{padding:20px 0 22px;margin-bottom:14px}
+.compare .model-row .label{margin-bottom:18px!important}
+.compare .body .asof{font-size:25px;line-height:1.3;margin:8px 0 0;color:var(--muted)}
+.compare .callout{margin-top:24px}

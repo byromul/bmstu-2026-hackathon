@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-08T12:41:39.907Z",
+  "sdk": "@excalidraw/excalidraw 0.18.1",
+  "node": "v26.9.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "chrome": "Chrome/156.0.8078.80",
+  "offline": true,
+  "errors": [],
+  "resources": [
+    "local export.html",
+    "local export-bundle.js",
+    "embedded data resource",
+    "embedded data resource",
+    "embedded data resource",
+    "embedded data resource"
+  ],
+  "elements": 24,
+  "arrows": 6,
+  "nodes": 6,
+  "fontFamily": 2
+}

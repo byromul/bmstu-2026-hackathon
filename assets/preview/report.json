@@ -1,8 +1,12 @@
 {
+  "date": "2026-11-08T13:14:43.087Z",
+  "chrome": "Chrome/156.0.8078.80",
+  "offline": true,
   "reports": [
     {
       "slide": 1,
       "title": "Использование ИИ-агентов для быстрого программирования",
+      "images": [],
       "bodyHeight": 900,
       "scrollHeight": 900,
       "footerTop": 872,
@@ -10,15 +14,27 @@
     },
     {
       "slide": 2,
-      "title": "Завершилась другая задача",
-      "bodyHeight": 603,
-      "scrollHeight": 603,
+      "title": "Жизненный цикл разработки",
+      "images": [
+        {
+          "artifact": "ART-0021",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
       "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 3,
-      "title": "Жизненный цикл разработки",
+      "title": "Как языковая модель получает ответ",
+      "images": [
+        {
+          "artifact": "ART-0022",
+          "loaded": true
+        }
+      ],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -26,7 +42,8 @@
     },
     {
       "slide": 4,
-      "title": "Как языковая модель получает ответ",
+      "title": "Что модель видит в текущем запросе",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -34,7 +51,8 @@
     },
     {
       "slide": 5,
-      "title": "Что модель видит в текущем запросе",
+      "title": "ИИ-ассистент и ИИ-агент",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -42,15 +60,27 @@
     },
     {
       "slide": 6,
-      "title": "Ответ в чате и работа агента",
+      "title": "Агентский цикл",
+      "images": [
+        {
+          "artifact": "ART-0018",
+          "loaded": true
+        }
+      ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
+      "footerTop": 872,
       "overflow": []
     },
     {
       "slide": 7,
       "title": "Harness организует работу агента",
+      "images": [
+        {
+          "artifact": "ART-0023",
+          "loaded": true
+        }
+      ],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -59,6 +89,7 @@
     {
       "slide": 8,
       "title": "Приложение, модель и провайдер",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -67,6 +98,7 @@
     {
       "slide": 9,
       "title": "Честный взгляд на доступ",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 818.609375,
@@ -75,6 +107,7 @@
     {
       "slide": 10,
       "title": "Китайские модели для первого эксперимента",
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 845,
@@ -82,8 +115,12 @@
     }
   ],
   "errors": [],
-  "requests": [
-    "file:///Users/byromul/Documents/projects/ai-lectors/14-nov-agents/lecture.html"
+  "resources": [
+    "local lecture.html",
+    "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image"
   ],
   "keys": {
     "first": "slide-01",
