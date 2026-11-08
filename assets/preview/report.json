@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T17:28:10.651Z",
+  "date": "2026-11-08T18:44:40.755Z",
   "chrome": "Chrome/156.0.8078.80",
   "offline": true,
   "reports": [
@@ -361,7 +361,7 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
+      "footerTop": 845,
       "overflow": []
     },
     {
@@ -403,7 +403,7 @@
     },
     {
       "slide": 38,
-      "title": "Что установить до занятия",
+      "title": "Что подготовить для повторения",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -480,7 +480,7 @@
     },
     {
       "slide": 46,
-      "title": "Создаём и применяем skill ревью",
+      "title": "Устройство и применение skill ревью",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -530,23 +530,28 @@
     }
   ],
   "errors": [],
+  "materialsDownload": {
+    "offline": true,
+    "bytes": 37600,
+    "verified": true
+  },
   "resources": [
     "local lecture.html",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image",
-    "embedded image"
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource"
   ],
   "keys": {
     "first": "slide-01",

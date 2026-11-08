@@ -1,11 +1,14 @@
 """Проверки контракта Markdown → автономный HTML. Без сторонних библиотек."""
 import contextlib
+import base64
 import io
 import json
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+import re
+from zipfile import ZipFile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import build
@@ -69,6 +72,30 @@ class BuildChecks(unittest.TestCase):
         self.assertNotIn('href="README.md', result)
         self.assertIn('Пример Спека', result)
         self.assertIn('Инструкция', result)
+
+    def test_student_bundle_survives_moving_html_offline(self):
+        self.append('[Материалы](lecture-materials.zip)')
+        result = self.compile()
+        match = re.search(r'href="data:application/zip;base64,([^"]+)" download="lecture-materials.zip"', result)
+        self.assertIsNotNone(match)
+        payload = base64.b64decode(match[1], validate=True)
+        with ZipFile(io.BytesIO(payload)) as archive:
+            self.assertIsNone(archive.testzip())
+            names = archive.namelist()
+            self.assertIn('START-HERE.md', names)
+            self.assertIn('starter-prompt.txt', names)
+            self.assertIn('examples/03-opencode-tasks/prepare.py', names)
+            self.assertIn('examples/03-opencode-tasks/.opencode/plugins/guard.js', names)
+            self.assertFalse(any('/.lab/' in n or ('/reports/' in n and not n.endswith('/reports/README.md')) or '.env' in n or '.glm_token' in n for n in names))
+            prompt = archive.read('starter-prompt.txt').decode()
+            self.assertIn('До реализации покажи мне спецификацию и план.', prompt)
+            self.assertEqual(payload, build.package_materials.bundle_bytes())
+
+    def test_arbitrary_data_links_remain_forbidden(self):
+        for markup in ['<a href="data:text/html;base64,QQ==" download="lecture-materials.zip">X</a>',
+                       '<a href="data:application/zip;base64,QQ==">X</a>']:
+            with self.subTest(markup=markup), self.assertRaisesRegex(ValueError, 'Локальная ссылка'):
+                build.ResourceCheck().feed(markup)
 
     def test_artifact_image_embedded(self):
         self.image_fixture()

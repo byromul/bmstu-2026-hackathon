@@ -2,6 +2,7 @@
 """Автономная сборка Markdown-презентации. Только стандартная библиотека Python."""
 from __future__ import annotations
 import argparse
+import base64
 import html
 from html.parser import HTMLParser
 from pathlib import Path
@@ -12,6 +13,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'assets'))
 import render_elements as elements
+import package_materials
 REGISTRY = ROOT / 'ARTIFACTS.md'
 SLIDE = re.compile(r"^## Слайд (\d{2,})\. (.+)$", re.M)
 
@@ -48,6 +50,9 @@ def inline(text, registry=REGISTRY):
                 if not url.startswith('artifact:'):
                     raise ValueError('Изображение должно ссылаться на artifact:ART-NNNN')
                 pieces.append(elements.artifact_image(url.removeprefix('artifact:'), registry, m[3]))
+            elif url == package_materials.NAME:
+                data = base64.b64encode(package_materials.bundle_bytes()).decode('ascii')
+                pieces.append(f'<a href="data:application/zip;base64,{data}" download="{package_materials.NAME}">{html.escape(m[3])}</a>')
             elif scheme in ('http', 'https', 'mailto'):
                 pieces.append(f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{html.escape(m[3])}</a>')
             elif url.startswith('#'):
@@ -123,6 +128,8 @@ class ResourceCheck(HTMLParser):
         attrs = dict(attrs)
         if tag == 'a':
             href = attrs.get('href', '')
+            if attrs.get('download') == package_materials.NAME and re.fullmatch(r'data:application/zip;base64,[A-Za-z0-9+/]+={0,2}', href):
+                return
             if href and not href.startswith(('#', 'https://', 'http://', 'mailto:')):
                 raise ValueError(f'Локальная ссылка в HTML: {href}')
             return
