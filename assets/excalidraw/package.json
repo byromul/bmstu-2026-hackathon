@@ -1,0 +1,14 @@
+{
+  "name": "lecture-excalidraw-trial",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bundle": "esbuild export-entry.js --bundle --format=iife --platform=browser --outfile=vendor/export-bundle.js --minify --define:process.env.NODE_ENV=\"'production'\" --legal-comments=eof"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.1",
+    "esbuild": "0.28.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

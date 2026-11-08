@@ -38,3 +38,5 @@
 .options .body>ul li{margin:7px 0}
 .options .callout{grid-column:2;grid-row:2/4;align-self:start;margin:0;font-size:32px}
 .options .body>p:last-child{grid-column:1/-1;grid-row:4;font-size:27px;margin:0}
+.agent-loop .body .artifact-image{height:520px;max-height:520px;width:100%;object-fit:contain}
+.agent-loop .callout{font-size:34px}
