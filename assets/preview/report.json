@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T16:02:52.239Z",
+  "date": "2026-11-08T16:45:03.032Z",
   "chrome": "Chrome/156.0.8078.80",
   "offline": true,
   "reports": [
@@ -36,7 +36,7 @@
         }
       ],
       "bodyHeight": 626,
-      "scrollHeight": 631,
+      "scrollHeight": 626,
       "footerTop": 845,
       "overflow": []
     },
@@ -55,7 +55,7 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
+      "footerTop": 872,
       "overflow": []
     },
     {
@@ -238,7 +238,7 @@
     },
     {
       "slide": 23,
-      "title": "MCP — Model Context Protocol",
+      "title": "MCP – Model Context Protocol",
       "images": [
         {
           "artifact": "ART-0054",

@@ -99,3 +99,6 @@
 .demo-image .body>p{font-size:30px;margin-top:14px}
 
 .mcp-visual .body>p{font-size:28px;margin:0 0 16px}.mcp-visual .artifact-image{height:500px;max-height:500px;object-fit:cover}
+
+/* Отделять пояснение от предшествующего смыслового акцента. */
+.slide .callout + p{margin-top:22px}
