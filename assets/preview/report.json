@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T15:19:16.208Z",
+  "date": "2026-11-08T16:02:52.239Z",
   "chrome": "Chrome/156.0.8078.80",
   "offline": true,
   "reports": [
@@ -36,7 +36,7 @@
         }
       ],
       "bodyHeight": 626,
-      "scrollHeight": 637,
+      "scrollHeight": 631,
       "footerTop": 845,
       "overflow": []
     },
@@ -68,7 +68,7 @@
         }
       ],
       "bodyHeight": 626,
-      "scrollHeight": 658,
+      "scrollHeight": 626,
       "footerTop": 872,
       "overflow": []
     },
@@ -92,11 +92,20 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 9,
+      "title": "Подбираем модель и глубину размышления",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 10,
       "title": "Честный взгляд на доступ",
       "images": [],
       "bodyHeight": 626,
@@ -105,7 +114,7 @@
       "overflow": []
     },
     {
-      "slide": 10,
+      "slide": 11,
       "title": "Китайские модели для первого эксперимента",
       "images": [],
       "bodyHeight": 626,
@@ -114,7 +123,7 @@
       "overflow": []
     },
     {
-      "slide": 11,
+      "slide": 12,
       "title": "Сравниваем конкретные варианты",
       "images": [],
       "bodyHeight": 626,
@@ -123,22 +132,17 @@
       "overflow": []
     },
     {
-      "slide": 12,
+      "slide": 13,
       "title": "Кто получает ваши данные",
-      "images": [
-        {
-          "artifact": "ART-0026",
-          "loaded": true
-        }
-      ],
+      "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 872,
       "overflow": []
     },
     {
-      "slide": 13,
-      "title": "Что придётся переносить",
+      "slide": 14,
+      "title": "Что нужно переносить",
       "images": [
         {
           "artifact": "ART-0027",
@@ -147,11 +151,11 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
+      "footerTop": 872,
       "overflow": []
     },
     {
-      "slide": 14,
+      "slide": 15,
       "title": "Из пожелания в ограниченную задачу",
       "images": [],
       "bodyHeight": 626,
@@ -160,16 +164,21 @@
       "overflow": []
     },
     {
-      "slide": 15,
-      "title": "Договоримся, что считать готовым",
-      "images": [],
+      "slide": 16,
+      "title": "Агентская разработка не повод лениться",
+      "images": [
+        {
+          "artifact": "ART-0051",
+          "loaded": true
+        }
+      ],
       "bodyHeight": 626,
       "scrollHeight": 626,
       "footerTop": 872,
       "overflow": []
     },
     {
-      "slide": 16,
+      "slide": 17,
       "title": "SDD связывает требования и проверку",
       "images": [],
       "bodyHeight": 626,
@@ -178,7 +187,16 @@
       "overflow": []
     },
     {
-      "slide": 17,
+      "slide": 18,
+      "title": "Договоримся, что считать готовым",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 19,
       "title": "Что переживёт длинную сессию",
       "images": [
         {
@@ -192,7 +210,7 @@
       "overflow": []
     },
     {
-      "slide": 18,
+      "slide": 20,
       "title": "Язык промпта и цена всей задачи",
       "images": [],
       "bodyHeight": 626,
@@ -201,7 +219,7 @@
       "overflow": []
     },
     {
-      "slide": 19,
+      "slide": 21,
       "title": "AGENTS.md: правила работы в проекте",
       "images": [],
       "bodyHeight": 626,
@@ -210,8 +228,8 @@
       "overflow": []
     },
     {
-      "slide": 20,
-      "title": "Инструмент, плагин, MCP, skill и хук",
+      "slide": 22,
+      "title": "Инструмент, плагин, MCP, skill и hook",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -219,7 +237,21 @@
       "overflow": []
     },
     {
-      "slide": 21,
+      "slide": 23,
+      "title": "MCP — Model Context Protocol",
+      "images": [
+        {
+          "artifact": "ART-0054",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
+      "overflow": []
+    },
+    {
+      "slide": 24,
       "title": "MCP: подключение почты",
       "images": [],
       "bodyHeight": 626,
@@ -228,7 +260,7 @@
       "overflow": []
     },
     {
-      "slide": 22,
+      "slide": 25,
       "title": "Когда стоит создать skill",
       "images": [],
       "bodyHeight": 626,
@@ -237,7 +269,7 @@
       "overflow": []
     },
     {
-      "slide": 23,
+      "slide": 26,
       "title": "Где управлять действиями агента",
       "images": [
         {
@@ -251,7 +283,7 @@
       "overflow": []
     },
     {
-      "slide": 24,
+      "slide": 27,
       "title": "Минимальные права для задачи",
       "images": [],
       "bodyHeight": 626,
@@ -260,7 +292,7 @@
       "overflow": []
     },
     {
-      "slide": 25,
+      "slide": 28,
       "title": "Письмо пытается стать командой",
       "images": [],
       "bodyHeight": 626,
@@ -269,7 +301,7 @@
       "overflow": []
     },
     {
-      "slide": 26,
+      "slide": 29,
       "title": "Изоляция зависит от доступов",
       "images": [],
       "bodyHeight": 626,
@@ -278,8 +310,8 @@
       "overflow": []
     },
     {
-      "slide": 27,
-      "title": "Как принять изменение",
+      "slide": 30,
+      "title": "Как принимать работу агента",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -287,7 +319,7 @@
       "overflow": []
     },
     {
-      "slide": 28,
+      "slide": 31,
       "title": "Тест программы и eval агента",
       "images": [],
       "bodyHeight": 626,
@@ -296,7 +328,7 @@
       "overflow": []
     },
     {
-      "slide": 29,
+      "slide": 32,
       "title": "Первый запуск: от задачи до результата",
       "images": [
         {
@@ -310,8 +342,22 @@
       "overflow": []
     },
     {
-      "slide": 30,
-      "title": "Какую среду вы соберёте для себя",
+      "slide": 33,
+      "title": "Почувствовали силу и уверенность?",
+      "images": [
+        {
+          "artifact": "ART-0052",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 34,
+      "title": "Если не знаете как начать",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -319,7 +365,35 @@
       "overflow": []
     },
     {
-      "slide": 31,
+      "slide": 35,
+      "title": "Какую среду вы соберёте для себя",
+      "images": [
+        {
+          "artifact": "ART-0053",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 36,
+      "title": "Вопросы",
+      "images": [
+        {
+          "artifact": "ART-0055",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 872,
+      "overflow": []
+    },
+    {
+      "slide": 37,
       "title": "Практика: завершаем задачу по ID",
       "images": [],
       "bodyHeight": 626,
@@ -328,7 +402,7 @@
       "overflow": []
     },
     {
-      "slide": 32,
+      "slide": 38,
       "title": "Что установить до занятия",
       "images": [],
       "bodyHeight": 626,
@@ -337,7 +411,7 @@
       "overflow": []
     },
     {
-      "slide": 33,
+      "slide": 39,
       "title": "Сначала спецификация и план",
       "images": [],
       "bodyHeight": 626,
@@ -346,7 +420,7 @@
       "overflow": []
     },
     {
-      "slide": 34,
+      "slide": 40,
       "title": "AGENTS.md именно этого проекта",
       "images": [],
       "bodyHeight": 626,
@@ -355,7 +429,7 @@
       "overflow": []
     },
     {
-      "slide": 35,
+      "slide": 41,
       "title": "Разрешить, спросить или отказать",
       "images": [],
       "bodyHeight": 626,
@@ -364,8 +438,8 @@
       "overflow": []
     },
     {
-      "slide": 36,
-      "title": "Хук до выполнения команды",
+      "slide": 42,
+      "title": "Hook до выполнения команды",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
@@ -373,7 +447,7 @@
       "overflow": []
     },
     {
-      "slide": 37,
+      "slide": 43,
       "title": "MCP готовит почту к работе",
       "images": [],
       "bodyHeight": 626,
@@ -382,7 +456,7 @@
       "overflow": []
     },
     {
-      "slide": 38,
+      "slide": 44,
       "title": "Агент реализует один небольшой шаг",
       "images": [
         {
@@ -396,7 +470,7 @@
       "overflow": []
     },
     {
-      "slide": 39,
+      "slide": 45,
       "title": "Код запустился, задача не выполнена",
       "images": [],
       "bodyHeight": 603,
@@ -405,7 +479,7 @@
       "overflow": []
     },
     {
-      "slide": 40,
+      "slide": 46,
       "title": "Создаём и применяем skill ревью",
       "images": [],
       "bodyHeight": 626,
@@ -414,7 +488,7 @@
       "overflow": []
     },
     {
-      "slide": 41,
+      "slide": 47,
       "title": "Приёмка: код, проверки и поведение",
       "images": [],
       "bodyHeight": 626,
@@ -423,7 +497,7 @@
       "overflow": []
     },
     {
-      "slide": 42,
+      "slide": 48,
       "title": "Письмо Боссу: от черновика до входящих",
       "images": [
         {
@@ -437,7 +511,7 @@
       "overflow": []
     },
     {
-      "slide": 43,
+      "slide": 49,
       "title": "Что осталось после рабочей сессии",
       "images": [],
       "bodyHeight": 626,
@@ -446,7 +520,7 @@
       "overflow": []
     },
     {
-      "slide": 44,
+      "slide": 50,
       "title": "Вопросы и самостоятельное повторение",
       "images": [],
       "bodyHeight": 626,
@@ -468,12 +542,16 @@
     "embedded image",
     "embedded image",
     "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
+    "embedded image",
     "embedded image"
   ],
   "keys": {
     "first": "slide-01",
     "second": "slide-02",
-    "last": "slide-44",
+    "last": "slide-50",
     "notes": true
   }
 }

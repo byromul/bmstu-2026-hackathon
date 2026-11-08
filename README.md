@@ -10,7 +10,7 @@
 | [AGENTS.md](AGENTS.md) | Прочитать правила работы над репозиторием |
 | [slides.md](slides.md) | Работать с единым файлом презентации |
 | [script.md](script.md) | Работать с единым сценарием лектора |
-| [lecture.html](lecture.html) | Открыть все 44 слайда в Chrome |
+| [lecture.html](lecture.html) | Открыть все 50 слайдов в Chrome |
 | [Теория](lecture-theory.html) / [практика](lecture-practice.html) | Показать каждый блок отдельно |
 | [Практический проект](examples/03-opencode-tasks/README.md) | Повторить демо с OpenCode v2, GLM и Mailpit |
 | [build.py](build.py) | Пересобрать HTML без сторонних библиотек |
@@ -53,4 +53,4 @@ python3 -B assets/test_build.py
 node assets/verify-deck.mjs
 ```
 
-Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 44 слайда без сети и 21 тест конвертора. Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.
+Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 50 слайдов без сети и 21 тест конвертора. Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.
