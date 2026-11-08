@@ -12,7 +12,7 @@
     stage.style.top = `${(innerHeight - 900 * scale) / 2}px`;
   }
   function show(n, updateHash = true) {
-    index = Math.min(slides.length - 1, Math.max(0, n));
+    index = Math.min(slides.length - 1, Math.max(0, Math.trunc(n)));
     slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
       slide.setAttribute('aria-hidden', i !== index ? 'true' : 'false');
@@ -32,12 +32,10 @@
   }
   function toggleNotes() {
     document.body.classList.toggle('notes-on');
-    document.querySelector('#toggle-notes').setAttribute('aria-pressed', document.body.classList.contains('notes-on'));
     resize();
   }
   document.querySelector('#previous').onclick = () => show(index - 1);
   document.querySelector('#next').onclick = () => show(index + 1);
-  document.querySelector('#toggle-notes').onclick = toggleNotes;
   document.querySelector('#fullscreen').onclick = () => {
     if (document.fullscreenElement) document.exitFullscreen();
     else document.documentElement.requestFullscreen().catch(() => {});

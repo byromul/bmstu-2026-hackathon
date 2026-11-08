@@ -1,6 +1,7 @@
-"""Проверки автономного конвертера, без сторонних библиотек."""
+"""Проверки контракта Markdown → автономный HTML. Без сторонних библиотек."""
 import contextlib
 import io
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -8,6 +9,10 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import build
+
+
+def block(kind, data):
+    return '```'+kind+'\n'+json.dumps(data, ensure_ascii=False)+'\n```\n'
 
 
 class BuildChecks(unittest.TestCase):
@@ -18,13 +23,24 @@ class BuildChecks(unittest.TestCase):
         self.source = self.root / 'slides.md'
         self.notes = self.root / 'script.md'
         self.output = self.root / 'output.html'
-        self.source.write_text('## Слайд 01. Пример\n\n<!-- layout: model; time: 00:00–01:00 -->\n\nТекст **слайда**.\n')
+        self.registry = self.root / 'ARTIFACTS.md'
+        self.source.write_text('## Слайд 01. Пример\n\n'+block('slide', {'layout':'plain', 'time':'00:00–01:00'})+'\nТекст **слайда**.\n')
         self.notes.write_text('## Слайд 01. Пример\n\nТекст речи.\n')
+        self.registry.write_text('# Артефакты\n')
+
+    def append(self, text):
+        with self.source.open('a') as stream:
+            stream.write('\n'+text+'\n')
 
     def compile(self):
         with contextlib.redirect_stdout(io.StringIO()):
-            build.build(self.source, self.notes, self.output)
+            build.build(self.source, self.notes, self.output, self.registry)
         return self.output.read_text()
+
+    def image_fixture(self):
+        (self.root/'prompt.md').write_text('Тестовый сохранённый промпт; генерация не выполнялась.')
+        (self.root/'image.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"/>')
+        self.registry.write_text('| ART-0099 | [Промпт](prompt.md) | [Картинка](image.svg) | Фикстура | Тест | Нет |\n')
 
     def test_offline_build_is_repeatable(self):
         first = self.compile()
@@ -40,26 +56,44 @@ class BuildChecks(unittest.TestCase):
         self.assertFalse(self.output.exists())
 
     def test_duplicate_external_sources_rejected(self):
-        with self.source.open('a') as f:
-            f.write('\nИсточники: [A](https://example.org) · [B](https://example.org)\n')
+        self.append('Источники: [A](https://example.org) · [B](https://example.org)')
         with self.assertRaisesRegex(ValueError, 'Повтор ссылки'):
             self.compile()
 
-    def test_local_image_embedded_and_link_rebased(self):
-        (self.root / 'diagram.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"/>')
-        (self.root / 'reference.md').write_text('# Материал')
-        with self.source.open('a') as f:
-            f.write('\n![Схема](diagram.svg)\n\n[Материал](reference.md)\n')
-        self.output = self.root / 'out' / 'deck.html'
+    def test_local_document_links_are_text_in_deck_and_notes(self):
+        self.append('[Пример](examples/example.py) [Спека](SPEC.md#section)')
+        self.notes.write_text(self.notes.read_text()+'\n[Инструкция](README.md)\n')
+        result = self.compile()
+        self.assertNotIn('href="examples/', result)
+        self.assertNotIn('href="SPEC.md', result)
+        self.assertNotIn('href="README.md', result)
+        self.assertIn('Пример Спека', result)
+        self.assertIn('Инструкция', result)
+
+    def test_artifact_image_embedded(self):
+        self.image_fixture()
+        self.append('![Описание](artifact:ART-0099)')
         result = self.compile()
         self.assertIn('src="data:image/svg+xml;base64,', result)
-        self.assertTrue('href="../reference.md"' in result, 'Относительная ссылка должна вести на соседний исходный материал')
+        self.assertIn('data-artifact="ART-0099"', result)
+        self.assertNotIn('href="prompt.md', result)
 
-    def test_remote_image_rejected(self):
-        with self.source.open('a') as f:
-            f.write('\n![Схема](https://example.org/image.png)\n')
-        with self.assertRaisesRegex(ValueError, 'локальным'):
+    def test_missing_image_prompt_rejected(self):
+        self.image_fixture()
+        (self.root/'prompt.md').unlink()
+        self.append('![Описание](artifact:ART-0099)')
+        with self.assertRaisesRegex(ValueError, 'промпта'):
             self.compile()
+
+    def test_unknown_artifact_rejected(self):
+        self.append('![Описание](artifact:ART-0000)')
+        with self.assertRaisesRegex(ValueError, 'одна запись'):
+            self.compile()
+
+    def test_direct_images_rejected(self):
+        for image in ('https://example.org/image.png', 'assets/image.png'):
+            with self.subTest(image=image), self.assertRaisesRegex(ValueError, 'artifact:'):
+                build.markdown(f'![Описание]({image})', self.registry)
 
     def test_sources_cannot_be_overwritten(self):
         self.output = self.source
@@ -73,10 +107,52 @@ class BuildChecks(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'тайминга'):
             self.compile()
 
-    def test_code_is_escaped(self):
-        result = build.markdown('```python\nprint("<script>")\n```')
-        self.assertIn('&lt;script&gt;', result)
-        self.assertNotIn('<script>', result)
+    def test_code_escaped_but_html_rejected(self):
+        self.append('```python\nprint("<script>")\n```')
+        self.assertIn('&lt;script&gt;', self.compile())
+        self.append('<div>Разметка</div>')
+        with self.assertRaisesRegex(ValueError, 'HTML в Markdown'):
+            self.compile()
+
+    def test_author_instructions_not_on_screen(self):
+        self.append(block('callout', {'text':'Главный вывод', 'tone':'warning', 'author':{'must':'СЕКРЕТ_ДИЗАЙНЕРА'}}))
+        result = self.compile()
+        self.assertNotIn('СЕКРЕТ_ДИЗАЙНЕРА', result)
+        self.assertIn('callout-warning', result)
+
+    def test_diagram_can_switch_renderer_without_changing_content(self):
+        self.image_fixture()
+        data = {'kind':'flows', 'rows':[{'title':'Цикл','nodes':[{'text':'Модель'},{'text':'Действие'}]}]}
+        native = build.markdown(block('diagram', data), self.registry)
+        self.assertIn('class="flow"', native)
+        data.update(render='image', artifact='ART-0099', alt='Цикл')
+        result = build.markdown(block('diagram', data), self.registry)
+        self.assertIn('data-artifact="ART-0099"', result)
+        self.assertNotIn('class="flow"', result)
+
+    def test_table_dimensions_validated(self):
+        self.append(block('table', {'columns':['A','B'], 'rows':[['1']]}))
+        with self.assertRaisesRegex(ValueError, 'размеры'):
+            self.compile()
+
+    def test_unknown_directive_rejected(self):
+        self.append(block('callout', {'text':'Вывод', 'colour':'red'}))
+        with self.assertRaisesRegex(ValueError, 'Неизвестные поля'):
+            self.compile()
+
+    def test_notes_button_and_help_absent_hotkey_remains(self):
+        result = self.compile()
+        self.assertNotIn('id="toggle-notes"', result)
+        self.assertNotIn('id="help"', result)
+        self.assertIn("event.key.toLowerCase() === 'n'", result)
+
+    def test_generated_html_rejects_local_navigation(self):
+        with self.assertRaisesRegex(ValueError, 'Локальная ссылка'):
+            build.ResourceCheck().feed('<a href="example.py">Код</a>')
+
+    def test_mermaid_cannot_silently_become_source_code(self):
+        with self.assertRaisesRegex(ValueError, 'Mermaid не подключён'):
+            build.markdown('```mermaid\nflowchart LR\nA --> B\n```')
 
 
 if __name__ == '__main__':

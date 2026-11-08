@@ -5,79 +5,79 @@
       "title": "Использование ИИ-агентов для быстрого программирования",
       "bodyHeight": 900,
       "scrollHeight": 900,
-      "footerTop": 860,
+      "footerTop": 872,
       "overflow": []
     },
     {
       "slide": 2,
       "title": "Завершилась другая задача",
-      "bodyHeight": 582,
-      "scrollHeight": 582,
-      "footerTop": 830,
+      "bodyHeight": 603,
+      "scrollHeight": 603,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 3,
       "title": "Жизненный цикл разработки",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 4,
       "title": "Как языковая модель получает ответ",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 5,
       "title": "Что модель видит в текущем запросе",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 6,
       "title": "Ответ в чате и работа агента",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 7,
       "title": "Harness организует работу агента",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 8,
       "title": "Приложение, модель и провайдер",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     },
     {
       "slide": 9,
       "title": "Честный взгляд на доступ",
-      "bodyHeight": 575,
-      "scrollHeight": 575,
-      "footerTop": 830,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 818.609375,
       "overflow": []
     },
     {
       "slide": 10,
       "title": "Китайские модели для первого эксперимента",
-      "bodyHeight": 570,
-      "scrollHeight": 570,
-      "footerTop": 831.5,
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 845,
       "overflow": []
     }
   ],
