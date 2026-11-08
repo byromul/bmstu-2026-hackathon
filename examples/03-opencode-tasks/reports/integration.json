@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-08",
+  "checks": {
+    "http": {
+      "id_1_done": true,
+      "id_2_unchanged": true,
+      "unknown_404": true,
+      "repeat_safe": true,
+      "persisted_after_restart": true
+    },
+    "mail": {
+      "tools": [
+        "prepare_report",
+        "send_report",
+        "list_inbox"
+      ],
+      "recipient": "boss@example.test",
+      "draft_did_not_send": true,
+      "first": {
+        "status": "received_locally",
+        "mailpit_id": "580qRKAyaHGuaALAaU195L",
+        "subject": "Учебная задача: отметка выполнена",
+        "recipient": "boss@example.test"
+      },
+      "repeat": {
+        "status": "already_received_locally",
+        "mailpit_id": "580qRKAyaHGuaALAaU195L",
+        "subject": "Учебная задача: отметка выполнена",
+        "recipient": "boss@example.test"
+      },
+      "inbox_count_increase": 1,
+      "transport": "MCP stdio → SMTP 127.0.0.1:1025 → Mailpit HTTP inbox",
+      "model_used": false,
+      "external_delivery": false
+    }
+  },
+  "service_log": "time=\"2026/11/08 17:28:42\" level=info msg=\"[smtp] only allowing recipients matching regexp: ^boss@example\\\\.test$\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[smtpd] starting on 127.0.0.1:1025 (no encryption)\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[host] allowed Host headers: 127.0.0.1, ::1, localhost\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[http] starting on 127.0.0.1:8025\"\ntime=\"2026/11/08 17:28:42\" level=info msg=\"[http] accessible via http://127.0.0.1:8025/\"\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/1/complete HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"POST /api/tasks/999/complete HTTP/1.1\" 404 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\nЗадачи: http://127.0.0.1:18080\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n127.0.0.1 - - [08/Nov/2026 17:28:42] \"GET /api/tasks HTTP/1.1\" 200 -\n[db] got terminated signal, shutting down\n"
+}
