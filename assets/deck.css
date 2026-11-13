@@ -102,3 +102,61 @@
 
 /* Отделять пояснение от предшествующего смыслового акцента. */
 .slide .callout + p{margin-top:22px}
+
+/* Единые размеры компонентов: источник, подпись, основной текст, акцент. */
+:root{--text:30px;--table-text:28px;--caption:24px;--source:18px;--block-gap:22px}
+.slide h1{font-size:58px;line-height:1.12}
+.slide.cover h1{font-size:96px}
+.slide .body{font-size:var(--text);line-height:1.3}
+.slide .body>p{font-size:var(--text);line-height:1.3;margin:0 0 var(--block-gap)}
+.slide .body>p:last-child{margin-bottom:0}
+.slide .body .asof{font-size:var(--caption);line-height:1.3;margin:0 0 var(--block-gap)}
+.slide .callout{font-size:32px;line-height:1.22;padding:16px 24px;margin:18px 0 0}
+.slide .callout + p{margin-top:var(--block-gap)}
+.slide .sources,.slide .sources a,.slide .footer-note{font-size:var(--source);line-height:1.4}
+.slide .sources{bottom:28px;left:64px;right:160px}
+.slide .footer-note{margin:0 0 4px}
+.slide .body table{font-size:var(--table-text);line-height:1.22;margin:0 0 var(--block-gap)}
+.slide .body th{font-size:var(--caption);line-height:1.25;padding:0 24px 14px 0}
+.slide .body td{padding:14px 24px 14px 0}
+.slide.starter-prompt .body,.slide.starter-prompt .body>p{font-size:26px;line-height:1.3}
+.logo-row{display:flex;justify-content:space-around;gap:36px;margin:0 0 24px}
+.logo-row figure{flex:1;min-width:0;margin:0;text-align:center}
+.slide .logo-row .artifact-image{width:100%;height:66px;max-height:66px;object-fit:contain}
+.logo-row figcaption{font-size:var(--caption);line-height:1.25;margin-top:10px;color:var(--muted)}
+.harness-visual .artifact-image{height:400px;max-height:400px}
+.lockin-visual .artifact-image{height:390px;max-height:390px}
+.terminal-visual .artifact-image{height:520px;max-height:520px}
+.meme-visual .body{display:grid;grid-template-columns:620px 1fr;grid-template-rows:1fr 1fr;gap:24px 70px;align-items:center}
+.meme-visual .artifact-image{grid-row:1/3;grid-column:1;height:620px;max-height:620px}
+.meme-visual .body>p{grid-column:2;margin:0}
+.meme-visual .body>p:first-of-type{align-self:end}
+.meme-visual .body>p:last-of-type{align-self:start}
+/* Нижний блок имеет одинаковую геометрию и типографику на каждом слайде. */
+.slide .sources{height:76px;bottom:24px;align-content:end}
+.cover-agenda{top:700px}
+.slide:not(.starter-prompt) .body>p{font-size:var(--text);line-height:1.3;margin:0 0 var(--block-gap)}
+.slide:not(.starter-prompt) .body>p:last-child{margin-bottom:0}
+.slide:not(.starter-prompt) .body>p.asof{font-size:var(--caption)}
+.slide:not(.starter-prompt) .callout+p{margin-top:var(--block-gap)}
+.slide.meme-visual .body>p{margin:0}
+.slide .body .label{font-size:var(--caption)!important;line-height:1.25;margin-bottom:18px!important}
+.slide .return-path{font-size:var(--caption)}
+.slide .flow{font-size:var(--text)}
+
+/* Редакция теории 14 ноября: размеры иллюстраций при общей типографике. */
+.ownership-visual .artifact-image{height:340px;max-height:340px}
+.effort-visual .artifact-image{height:280px;max-height:280px}
+.long-task-visual .artifact-image{height:420px;max-height:420px}
+.control-gate .artifact-image{height:410px;max-height:410px}
+.task-brief .body{display:grid;grid-template-columns:0.9fr 1.3fr;gap:22px 42px;align-content:start}
+.task-brief .body>p{grid-column:1/-1}
+.slide.task-brief .body table{align-self:start}
+.slide.task-brief .body table:first-of-type td:first-child{width:42%}
+.slide.task-brief .body table:last-of-type td:first-child{width:25%}
+.skill-example pre{font-size:26px;line-height:1.3;white-space:pre-wrap}
+.skill-example pre code{font-size:inherit;line-height:inherit;white-space:inherit}
+
+/* Двухстрочный заголовок сохраняет общий кегль. */
+.roadmap-visual .body{top:226px}
+.roadmap-visual .artifact-image{height:420px;max-height:420px}

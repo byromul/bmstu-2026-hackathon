@@ -81,7 +81,7 @@ def markdown(text, registry=REGISTRY):
             while i < len(lines) and not lines[i].startswith('```'):
                 code.append(lines[i]); i += 1
             if i == len(lines): raise ValueError("Незакрытый блок кода")
-            if language in {'diagram', 'table', 'image', 'callout', 'cover', 'result', 'caption'}:
+            if language in {'diagram', 'table', 'image', 'logos', 'callout', 'cover', 'result', 'caption'}:
                 output.append(elements.render(language, '\n'.join(code), registry))
             elif language == 'mermaid':
                 raise ValueError('Mermaid не подключён: используйте diagram или подготовленный артефакт изображения')

@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-14T00:42:58.234997+03:00",
+  "paired_slides": 50,
+  "changed_titles": [
+    16,
+    20,
+    21
+  ],
+  "removed_roadmap_caption": true,
+  "diagram_only": true,
+  "browser": [
+    {
+      "source": "lecture.html",
+      "slides": 50,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-50",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-theory.html",
+      "slides": 36,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-36",
+        "notes": true
+      }
+    }
+  ],
+  "committed": false,
+  "hashes": {
+    "slides.md": "4a2bf674d30ff98fee9e335ad91081fecb0462dfd408ee813293739e0a6992f3",
+    "script.md": "3f576f8cf72e84243038963bd337360ab3adb596de92dcdc9371d6a8dd6c67e3",
+    "lecture.html": "401785df8e37e53c053b18ee05a1cfa18ceb1872420a615a7041b03613b15efc",
+    "lecture-theory.html": "63ab2b428539b365f8c1977966d2c6c500922154ca7ebea006093d731381928b",
+    "assets/ART-0076-effort-bars.svg": "47bc8951259db205a1d7e4e3db81794377a960e31335db67460d664cbf3ad785"
+  }
+}

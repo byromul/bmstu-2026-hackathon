@@ -105,6 +105,15 @@ class BuildChecks(unittest.TestCase):
         self.assertIn('data-artifact="ART-0099"', result)
         self.assertNotIn('href="prompt.md', result)
 
+    def test_logo_row_embeds_assets_and_escapes_names(self):
+        self.image_fixture()
+        self.append(block('logos', {'items': [{'artifact': 'ART-0099', 'name': '<Provider>'}]}))
+        result = self.compile()
+        self.assertIn('class="logo-row"', result)
+        self.assertIn('<figcaption>&lt;Provider&gt;</figcaption>', result)
+        self.assertIn('src="data:image/svg+xml;base64,', result)
+        self.assertNotIn('<Provider>', result)
+
     def test_missing_image_prompt_rejected(self):
         self.image_fixture()
         (self.root/'prompt.md').unlink()

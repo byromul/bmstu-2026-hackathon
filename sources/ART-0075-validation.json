@@ -1,0 +1,82 @@
+{
+  "completed_at": "2026-11-14T00:27:01+03:00",
+  "base_commit": "b5c0eab",
+  "committed": false,
+  "paired_headings": 50,
+  "blocks": [
+    36,
+    14
+  ],
+  "block_seconds": [
+    2400,
+    2400
+  ],
+  "tests_passed": 24,
+  "removed_sections_absent": true,
+  "local_handout_paths_absent_from_show": true,
+  "skill_matches_slide": true,
+  "local_links_checked": 426,
+  "missing_local_targets": [],
+  "browser": [
+    {
+      "source": "lecture.html",
+      "slides": 50,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-50",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-theory.html",
+      "slides": 36,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-36",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-practice.html",
+      "slides": 14,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-37",
+        "second": "slide-38",
+        "last": "slide-50",
+        "notes": true
+      }
+    }
+  ],
+  "footer_style": {
+    "fontSize": "18px",
+    "lineHeight": "25.2px",
+    "height": "76px",
+    "left": "64px",
+    "right": "160px",
+    "bottom": "24px"
+  },
+  "hashes": {
+    "slides.md": "c18a282db061356491ae6b85b671aac4f0e608018c2f64eb9971e3e7b3f7536e",
+    "script.md": "2521eb3155b225d8604c14726567ab046a8c15203b368c0489dae5551e075180",
+    "lecture.html": "ba78ecece04840501e128355b8624f845b71c85374218f9b1701c2c821d438bc",
+    "lecture-theory.html": "eabc8b43ba4658378dcb2a746f6c115c34799c952b039f9188b86488c694ebc6",
+    "lecture-practice.html": "61e1152dc12462165b84ebb9ffb9f44f747d14502a5074db48bc1d8df13bfb58",
+    "assets/deck.css": "c67eb836795c52810453e014b500d8070567b4198b52faad1ff05e9f61eeecd7",
+    "assets/render_revision_diagrams.py": "71c480d94875fdfc38b8d1435e324f9c8d18808a8c4a45a2afb715afcd77946e",
+    "examples/04-readable-text/SKILL.md": "5957dae38fdf40034d7255b83e9192a43f45ab35b9767babbeed5d10e1a86602"
+  }
+}

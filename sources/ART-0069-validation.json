@@ -1,0 +1,312 @@
+{
+  "completed_at": "2026-11-08T22:29:57.879564+03:00",
+  "base_commit": "b5c0eab",
+  "tests": {
+    "passed": 24
+  },
+  "paired_headings": 53,
+  "starter_prompt_unchanged": true,
+  "removed_fragments_absent": true,
+  "html_rebuild_identical_after_checks": true,
+  "browser": [
+    {
+      "source": "lecture.html",
+      "slides": 53,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-53",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-theory.html",
+      "slides": 39,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-39",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-practice.html",
+      "slides": 14,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-40",
+        "second": "slide-41",
+        "last": "slide-53",
+        "notes": true
+      }
+    }
+  ],
+  "footer_styles": {
+    "fontSize": "18px",
+    "lineHeight": "25.2px",
+    "height": "76px",
+    "left": "64px",
+    "right": "160px",
+    "bottom": "24px"
+  },
+  "table_styles": [
+    [
+      "TD",
+      "28px",
+      "14px 24px 14px 0px"
+    ],
+    [
+      "TH",
+      "24px",
+      "0px 24px 14px 0px"
+    ]
+  ],
+  "intervals": [
+    {
+      "slide": 1,
+      "time": "00:00–00:40"
+    },
+    {
+      "slide": 2,
+      "time": "00:40–01:45"
+    },
+    {
+      "slide": 3,
+      "time": "01:45–02:50"
+    },
+    {
+      "slide": 4,
+      "time": "02:50–03:45"
+    },
+    {
+      "slide": 5,
+      "time": "03:45–04:50"
+    },
+    {
+      "slide": 6,
+      "time": "04:50–05:20"
+    },
+    {
+      "slide": 7,
+      "time": "05:20–05:40"
+    },
+    {
+      "slide": 8,
+      "time": "05:40–06:35"
+    },
+    {
+      "slide": 9,
+      "time": "06:35–07:55"
+    },
+    {
+      "slide": 10,
+      "time": "07:55–08:40"
+    },
+    {
+      "slide": 11,
+      "time": "08:40–09:45"
+    },
+    {
+      "slide": 12,
+      "time": "09:45–11:30"
+    },
+    {
+      "slide": 13,
+      "time": "11:30–12:55"
+    },
+    {
+      "slide": 14,
+      "time": "12:55–14:10"
+    },
+    {
+      "slide": 15,
+      "time": "14:10–15:15"
+    },
+    {
+      "slide": 16,
+      "time": "15:15–16:20"
+    },
+    {
+      "slide": 17,
+      "time": "16:20–16:55"
+    },
+    {
+      "slide": 18,
+      "time": "16:55–18:10"
+    },
+    {
+      "slide": 19,
+      "time": "18:10–18:45"
+    },
+    {
+      "slide": 20,
+      "time": "18:45–20:25"
+    },
+    {
+      "slide": 21,
+      "time": "20:25–21:20"
+    },
+    {
+      "slide": 22,
+      "time": "21:20–22:25"
+    },
+    {
+      "slide": 23,
+      "time": "22:25–23:10"
+    },
+    {
+      "slide": 24,
+      "time": "23:10–24:10"
+    },
+    {
+      "slide": 25,
+      "time": "24:10–25:10"
+    },
+    {
+      "slide": 26,
+      "time": "25:10–25:45"
+    },
+    {
+      "slide": 27,
+      "time": "25:45–26:50"
+    },
+    {
+      "slide": 28,
+      "time": "26:50–27:55"
+    },
+    {
+      "slide": 29,
+      "time": "27:55–29:05"
+    },
+    {
+      "slide": 30,
+      "time": "29:05–30:15"
+    },
+    {
+      "slide": 31,
+      "time": "30:15–31:25"
+    },
+    {
+      "slide": 32,
+      "time": "31:25–32:40"
+    },
+    {
+      "slide": 33,
+      "time": "32:40–34:20"
+    },
+    {
+      "slide": 34,
+      "time": "34:20–35:30"
+    },
+    {
+      "slide": 35,
+      "time": "35:30–36:50"
+    },
+    {
+      "slide": 36,
+      "time": "36:50–37:20"
+    },
+    {
+      "slide": 37,
+      "time": "37:20–37:50"
+    },
+    {
+      "slide": 38,
+      "time": "37:50–39:00"
+    },
+    {
+      "slide": 39,
+      "time": "39:00–40:00"
+    },
+    {
+      "slide": 40,
+      "time": "00:00–02:00"
+    },
+    {
+      "slide": 41,
+      "time": "02:00–04:00"
+    },
+    {
+      "slide": 42,
+      "time": "04:00–07:00"
+    },
+    {
+      "slide": 43,
+      "time": "07:00–10:00"
+    },
+    {
+      "slide": 44,
+      "time": "10:00–13:00"
+    },
+    {
+      "slide": 45,
+      "time": "13:00–15:00"
+    },
+    {
+      "slide": 46,
+      "time": "15:00–17:00"
+    },
+    {
+      "slide": 47,
+      "time": "17:00–21:00"
+    },
+    {
+      "slide": 48,
+      "time": "21:00–25:00"
+    },
+    {
+      "slide": 49,
+      "time": "25:00–29:00"
+    },
+    {
+      "slide": 50,
+      "time": "29:00–34:00"
+    },
+    {
+      "slide": 51,
+      "time": "34:00–38:00"
+    },
+    {
+      "slide": 52,
+      "time": "38:00–39:00"
+    },
+    {
+      "slide": 53,
+      "time": "39:00–40:00"
+    }
+  ],
+  "sha256": {
+    "slides.md": "32664577ac805917a068cc48cf736a3d87abd5ee05b6a3bb26b270f5605e729c",
+    "script.md": "746236c6e9d70f885fbe45ce41f715516f5186e2041f4b470c7210a5c43ff6c9",
+    "assets/deck.css": "4b72057f14fe4c3f0a122c9f3512c152b353a8ae075c18d5c4a74fc068968942",
+    "lecture.html": "d8587a0fe6774858f90d8e30b59e16932d9d4b1b67ce6e2d5a1ab18f2829911a",
+    "lecture-theory.html": "7391503561160f5a68cf0830dbd1c80c035f4affc9d18045adb7ac3bc48a1afb",
+    "lecture-practice.html": "ce14087e92c340a34054483e700d968d644a6c7abf7681e310e2aa141d349ba3",
+    "lecture-materials.zip": "963206edf1d48740ce24c49176c06229643c7a85e0f8c1abbb9327ebefa18d55",
+    "assets/LET-ME-OUT-meme-3.jpg": "a1a25367a34e23f18b369a0ce4696a127037dc15d16c6d4018b5fb53aab01658",
+    "assets/ART-0066-ollama.png": "5c5528504c307d34af504f39bc4e7007d2f6f31ee00dab699cc91584d1af8aca",
+    "assets/ART-0062-anthropic.png": "40e3900fcb3ad237af6869dbd40e77efc8eb23549c478125b40e563ac74423cb",
+    "assets/ART-0065-openrouter.png": "ec915bd303e5d8501f02a37029fa01ede150b507357ef4c9739efb720d0df445",
+    "assets/ART-0064-kimi.png": "6c14f9c3062e953b3ed57ae3e19db931c1c1bba38d4d8d55550544f31d55e469",
+    "assets/ART-0063-openai.svg": "6ab2f60b45feb247fda6313f4ec79761f0946188eca7de91030d59bade95b290",
+    "assets/ART-0060-opencode-terminal.png": "f56e7a9d86e7e00c6afd0266f9e5b3a6662b037b3430f8be07d9316e31438056",
+    "assets/ART-0068-deepseek.png": "d1e6058d19b04817a623dc6e3a99405c70defaf412e9296edf7dbe2032ff7cbe",
+    "assets/ART-0067-zai.svg": "07a45e8e35b0b631ed2c68cd1cb041f9721b1ceeb0bd0e34f1459b0304a741c7"
+  },
+  "limits": [
+    "Расчёт 40+40, без репетиции лектора",
+    "Windows и чистая установка не проверены",
+    "Модель не вызывалась; исходный код демо не менялся"
+  ]
+}

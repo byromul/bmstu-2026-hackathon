@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-08T18:44:40.755Z",
-  "chrome": "Chrome/156.0.8078.80",
+  "date": "2026-11-13T21:42:01.594Z",
+  "chrome": "Chrome/157.0.8103.78",
   "offline": true,
   "reports": [
     {
@@ -9,8 +9,18 @@
       "images": [],
       "bodyHeight": 900,
       "scrollHeight": 900,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 2,
@@ -23,8 +33,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 3,
@@ -37,8 +57,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 4,
@@ -46,8 +76,18 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 5,
@@ -55,11 +95,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 6,
+      "title": "Первый экран терминального агента",
+      "images": [
+        {
+          "artifact": "ART-0060",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
+    },
+    {
+      "slide": 7,
+      "title": "Ничего не напоминает?",
+      "images": [
+        {
+          "artifact": "ART-0061",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
+    },
+    {
+      "slide": 8,
       "title": "Агентский цикл",
       "images": [
         {
@@ -69,11 +167,21 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
-      "slide": 7,
+      "slide": 9,
       "title": "Harness организует работу агента",
       "images": [
         {
@@ -83,88 +191,652 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
-      "slide": 8,
+      "slide": 10,
       "title": "Приложение, модель и провайдер",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
-      "slide": 9,
+      "slide": 11,
       "title": "Подбираем модель и глубину размышления",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
-    },
-    {
-      "slide": 10,
-      "title": "Честный взгляд на доступ",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 818.609375,
-      "overflow": []
-    },
-    {
-      "slide": 11,
-      "title": "Китайские модели для первого эксперимента",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 12,
-      "title": "Сравниваем конкретные варианты",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 820.109375,
-      "overflow": []
-    },
-    {
-      "slide": 13,
-      "title": "Кто получает ваши данные",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
-    },
-    {
-      "slide": 14,
-      "title": "Что нужно переносить",
+      "title": "Честный взгляд на доступ",
       "images": [
         {
-          "artifact": "ART-0027",
+          "artifact": "ART-0062",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0063",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0064",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0065",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0066",
           "loaded": true
         }
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
-      "slide": 15,
-      "title": "Из пожелания в ограниченную задачу",
+      "slide": 13,
+      "title": "Китайские модели для первого эксперимента",
+      "images": [
+        {
+          "artifact": "ART-0067",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0064",
+          "loaded": true
+        },
+        {
+          "artifact": "ART-0068",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 14,
+      "title": "Сравниваем конкретные варианты",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 15,
+      "title": "Кто получает ваши данные",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 16,
+      "title": "Что нельзя терять при смене провайдера",
+      "images": [
+        {
+          "artifact": "ART-0070",
+          "loaded": true
+        }
+      ],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
+    },
+    {
+      "slide": 17,
+      "title": "Пример задачи: отчёт по оценкам",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 18,
       "title": "Агентская разработка не повод лениться",
       "images": [
         {
@@ -174,70 +846,318 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
-    },
-    {
-      "slide": 17,
-      "title": "SDD связывает требования и проверку",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
-    },
-    {
-      "slide": 18,
-      "title": "Договоримся, что считать готовым",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 19,
-      "title": "Что переживёт длинную сессию",
+      "title": "Новые правила игры",
       "images": [
         {
-          "artifact": "ART-0028",
+          "artifact": "ART-0076",
           "loaded": true
         }
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 20,
-      "title": "Язык промпта и цена всей задачи",
+      "title": "В первую очередь спека",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 818.609375,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 21,
-      "title": "AGENTS.md: правила работы в проекте",
-      "images": [],
+      "title": "Проблемы долгой сессии",
+      "images": [
+        {
+          "artifact": "ART-0072",
+          "loaded": true
+        }
+      ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 22,
-      "title": "Инструмент, плагин, MCP, skill и hook",
+      "title": "Разница в языке, на котором общаемся",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 846.5,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 23,
+      "title": "Организация работы в проекте",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 24,
+      "title": "\"Руки\" агента",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 25,
       "title": "MCP – Model Context Protocol",
       "images": [
         {
@@ -247,103 +1167,349 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
-      "slide": 24,
-      "title": "MCP: подключение почты",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
-    },
-    {
-      "slide": 25,
+      "slide": 26,
       "title": "Когда стоит создать skill",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
-      "slide": 26,
-      "title": "Где управлять действиями агента",
+      "slide": 27,
+      "title": "Пример скилла",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
+    },
+    {
+      "slide": 28,
+      "title": "Надо ли контролировать агента?",
       "images": [
         {
-          "artifact": "ART-0029",
+          "artifact": "ART-0073",
           "loaded": true
         }
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
-      "slide": 27,
+      "slide": 29,
       "title": "Минимальные права для задачи",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
-    },
-    {
-      "slide": 28,
-      "title": "Письмо пытается стать командой",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
-    },
-    {
-      "slide": 29,
-      "title": "Изоляция зависит от доступов",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 30,
+      "title": "Опасность промпт-инъекций",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
+    },
+    {
+      "slide": 31,
       "title": "Как принимать работу агента",
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
-    },
-    {
-      "slide": 31,
-      "title": "Тест программы и eval агента",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 32,
-      "title": "Первый запуск: от задачи до результата",
+      "title": "Подведём итог: как приступить к агентской разработке",
       "images": [
         {
           "artifact": "ART-0030",
           "loaded": true
         }
       ],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "bodyHeight": 564,
+      "scrollHeight": 564,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 33,
-      "title": "Почувствовали силу и уверенность?",
+      "title": "Готовы окунуться в разработку через ИИ-агентов?",
       "images": [
         {
           "artifact": "ART-0052",
@@ -352,8 +1518,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 34,
@@ -361,8 +1537,18 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 35,
@@ -375,8 +1561,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 36,
@@ -389,8 +1585,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 37,
@@ -398,8 +1604,59 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 38,
@@ -407,8 +1664,94 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 820.109375,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 39,
@@ -416,8 +1759,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 40,
@@ -425,8 +1829,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 41,
@@ -434,8 +1899,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 42,
@@ -443,8 +1969,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 43,
@@ -452,8 +2039,18 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 44,
@@ -466,8 +2063,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 45,
@@ -475,8 +2082,18 @@
       "images": [],
       "bodyHeight": 603,
       "scrollHeight": 603,
-      "footerTop": 845,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 46,
@@ -484,8 +2101,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 47,
@@ -493,8 +2171,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 48,
@@ -507,8 +2246,18 @@
       ],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
     },
     {
       "slide": 49,
@@ -516,8 +2265,69 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     },
     {
       "slide": 50,
@@ -525,18 +2335,83 @@
       "images": [],
       "bodyHeight": 626,
       "scrollHeight": 626,
-      "footerTop": 872,
-      "overflow": []
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": [
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TH",
+          "font": "24px",
+          "padding": "0px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        },
+        {
+          "tag": "TD",
+          "font": "28px",
+          "padding": "14px 24px 14px 0px"
+        }
+      ]
     }
   ],
   "errors": [],
-  "materialsDownload": {
-    "offline": true,
-    "bytes": 37600,
-    "verified": true
+  "materialsDownload": null,
+  "footerStyles": {
+    "fontSize": "18px",
+    "lineHeight": "25.2px",
+    "height": "76px",
+    "left": "64px",
+    "right": "160px",
+    "bottom": "24px"
   },
   "resources": [
     "local lecture.html",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
+    "embedded resource",
     "embedded resource",
     "embedded resource",
     "embedded resource",

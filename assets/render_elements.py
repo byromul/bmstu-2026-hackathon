@@ -133,6 +133,16 @@ def render(kind, raw, registry):
     if kind == 'image':
         check_fields(data, {'artifact','alt','fit'}, {'artifact','alt'})
         return artifact_image(data['artifact'], registry, data['alt'], data.get('fit','contain'))
+    if kind == 'logos':
+        check_fields(data, {'items'}, {'items'})
+        if not isinstance(data['items'], list) or not 1 <= len(data['items']) <= 5:
+            raise ValueError('logos: нужно от одного до пяти логотипов')
+        items = []
+        for item in data['items']:
+            check_fields(item, {'artifact', 'name'}, {'artifact', 'name'})
+            img = artifact_image(item['artifact'], registry, 'Логотип ' + item['name'])
+            items.append(f'<figure>{img}<figcaption>{esc(item["name"])}</figcaption></figure>')
+        return '<div class="logo-row">' + ''.join(items) + '</div>'
     if kind == 'diagram':
         return diagram(data)
     if kind == 'table':

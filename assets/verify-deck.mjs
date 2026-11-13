@@ -42,7 +42,9 @@ for(const slideId of slideIds){
  await send('Runtime.evaluate',{expression:`location.hash=${JSON.stringify(slideId)}`});
  await new Promise(r=>setTimeout(r,100));
  const report=await send('Runtime.evaluate',{expression:`(()=>{const s=document.querySelector('.slide.active'); const body=s.querySelector('.body');const footer=s.querySelector('.sources').getBoundingClientRect();const bounds=body.getBoundingClientRect();let out=[];for(const e of body.querySelectorAll('*')){if(!e.textContent.trim()&&e.tagName!=='IMG')continue;const r=e.getBoundingClientRect();if(r.bottom>footer.top-10||r.right>1536||r.left<56)out.push({tag:e.tagName,text:e.textContent.slice(0,65),x:r.x,y:r.y,right:r.right,bottom:r.bottom});}return {title:s.querySelector('h1').textContent,images:[...s.querySelectorAll('img')].map(i=>({artifact:i.dataset.artifact,loaded:i.complete&&i.naturalWidth>0})),bodyHeight:bounds.height,scrollHeight:body.scrollHeight,footerTop:footer.top,overflow:out};})()`,returnByValue:true});
- reports.push({slide:i,...report.result.value});
+ const styles=(await send('Runtime.evaluate',{expression:`(()=>{const s=document.querySelector('.slide.active'),h=s.querySelector('h1'),b=s.querySelector('.body'),f=s.querySelector('.sources');const cs=getComputedStyle(f);return {titleOverlap:!s.classList.contains('cover')&&h.getBoundingClientRect().bottom>b.getBoundingClientRect().top-12,footer:{fontSize:cs.fontSize,lineHeight:cs.lineHeight,height:cs.height,left:cs.left,right:cs.right,bottom:cs.bottom},tableFonts:[...s.querySelectorAll('th,td')].map(e=>({tag:e.tagName,font:getComputedStyle(e).fontSize,padding:getComputedStyle(e).padding}))}})()`,returnByValue:true})).result.value;
+ if(styles.titleOverlap)report.result.value.overflow.push({tag:'H1',text:'Заголовок пересекает область содержания'});
+ reports.push({slide:i,...report.result.value,...styles});
  const png=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
  await writeFile(`${dir}/slide-${String(i).padStart(2,'0')}.png`,Buffer.from(png.data,'base64'));
 }
@@ -72,9 +74,11 @@ await send('Input.dispatchKeyEvent',{type:'keyDown',key:'n',code:'KeyN'});await 
 let notes=(await send('Runtime.evaluate',{expression:`document.body.classList.contains('notes-on') && document.querySelector('.note.active h2').textContent.startsWith(${JSON.stringify(slideIds[1].slice(-2)+'.')})`,returnByValue:true})).result.value;
 await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape'});
 
+  const footerStyles=[...new Set(reports.map(r=>JSON.stringify(r.footer)))];
+  if(footerStyles.length!==1)throw new Error('Различаются стили нижнего блока');
   const network=requests.filter(url=>/^https?:/.test(url));
   const report={date:new Date().toISOString(),chrome:(await send('Browser.getVersion')).product,
-    offline:true,reports,errors,materialsDownload,resources:requests.map(url=>url.startsWith('data:')?'embedded resource':url.startsWith('file:')?'local '+sourceName:url),
+    offline:true,reports,errors,materialsDownload,footerStyles:JSON.parse(footerStyles[0]),resources:requests.map(url=>url.startsWith('data:')?'embedded resource':url.startsWith('file:')?'local '+sourceName:url),
     keys:{first,second,last,notes}};
   await writeFile(path.join(dir,'report.json'),JSON.stringify(report,null,2)+'\n');
   const cards=reports.map(r=>`<a href="slide-${String(r.slide).padStart(2,'0')}.png"><img loading="lazy" src="slide-${String(r.slide).padStart(2,'0')}.png" alt="Слайд ${r.slide}"><span>${String(r.slide).padStart(2,'0')}. ${r.title.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}</span></a>`).join('');
