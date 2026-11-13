@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-13T21:52:41.172Z",
+  "date": "2026-11-13T22:00:56.245Z",
   "chrome": "Chrome/157.0.8103.78",
   "offline": true,
   "reports": [
@@ -727,116 +727,6 @@
     },
     {
       "slide": 17,
-      "title": "Пример задачи: отчёт по оценкам",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 800,
-      "overflow": [],
-      "titleOverlap": false,
-      "footer": {
-        "fontSize": "18px",
-        "lineHeight": "25.2px",
-        "height": "76px",
-        "left": "64px",
-        "right": "160px",
-        "bottom": "24px"
-      },
-      "tableFonts": [
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        }
-      ]
-    },
-    {
-      "slide": 18,
       "title": "Агентская разработка не повод лениться",
       "images": [
         {
@@ -860,7 +750,7 @@
       "tableFonts": []
     },
     {
-      "slide": 19,
+      "slide": 18,
       "title": "Новые правила игры",
       "images": [
         {
@@ -884,7 +774,7 @@
       "tableFonts": []
     },
     {
-      "slide": 20,
+      "slide": 19,
       "title": "В первую очередь спека",
       "images": [],
       "bodyHeight": 626,
@@ -903,7 +793,7 @@
       "tableFonts": []
     },
     {
-      "slide": 21,
+      "slide": 20,
       "title": "Проблемы долгой сессии",
       "images": [
         {
@@ -927,7 +817,7 @@
       "tableFonts": []
     },
     {
-      "slide": 22,
+      "slide": 21,
       "title": "Разница в языке, на котором общаемся",
       "images": [],
       "bodyHeight": 626,
@@ -977,7 +867,7 @@
       ]
     },
     {
-      "slide": 23,
+      "slide": 22,
       "title": "Организация работы в проекте",
       "images": [],
       "bodyHeight": 626,
@@ -1047,7 +937,7 @@
       ]
     },
     {
-      "slide": 24,
+      "slide": 23,
       "title": "\"Руки\" агента",
       "images": [],
       "bodyHeight": 626,
@@ -1157,7 +1047,7 @@
       ]
     },
     {
-      "slide": 25,
+      "slide": 24,
       "title": "MCP – Model Context Protocol",
       "images": [
         {
@@ -1181,7 +1071,7 @@
       "tableFonts": []
     },
     {
-      "slide": 26,
+      "slide": 25,
       "title": "Когда стоит создать skill",
       "images": [],
       "bodyHeight": 626,
@@ -1261,7 +1151,7 @@
       ]
     },
     {
-      "slide": 27,
+      "slide": 26,
       "title": "Пример скилла",
       "images": [],
       "bodyHeight": 626,
@@ -1280,7 +1170,7 @@
       "tableFonts": []
     },
     {
-      "slide": 28,
+      "slide": 27,
       "title": "Надо ли контролировать агента?",
       "images": [
         {
@@ -1304,7 +1194,7 @@
       "tableFonts": []
     },
     {
-      "slide": 29,
+      "slide": 28,
       "title": "Минимальные права для задачи",
       "images": [],
       "bodyHeight": 626,
@@ -1364,7 +1254,7 @@
       ]
     },
     {
-      "slide": 30,
+      "slide": 29,
       "title": "Опасность промпт-инъекций",
       "images": [],
       "bodyHeight": 626,
@@ -1414,77 +1304,7 @@
       ]
     },
     {
-      "slide": 31,
-      "title": "Как принимать работу агента",
-      "images": [],
-      "bodyHeight": 626,
-      "scrollHeight": 626,
-      "footerTop": 800,
-      "overflow": [],
-      "titleOverlap": false,
-      "footer": {
-        "fontSize": "18px",
-        "lineHeight": "25.2px",
-        "height": "76px",
-        "left": "64px",
-        "right": "160px",
-        "bottom": "24px"
-      },
-      "tableFonts": [
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TH",
-          "font": "24px",
-          "padding": "0px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        },
-        {
-          "tag": "TD",
-          "font": "28px",
-          "padding": "14px 24px 14px 0px"
-        }
-      ]
-    },
-    {
-      "slide": 32,
+      "slide": 30,
       "title": "Подведём итог: как приступить к агентской разработке",
       "images": [
         {
@@ -1508,7 +1328,7 @@
       "tableFonts": []
     },
     {
-      "slide": 33,
+      "slide": 31,
       "title": "Готовы окунуться в разработку через ИИ-агентов?",
       "images": [
         {
@@ -1532,7 +1352,7 @@
       "tableFonts": []
     },
     {
-      "slide": 34,
+      "slide": 32,
       "title": "Если не знаете как начать",
       "images": [],
       "bodyHeight": 626,
@@ -1551,7 +1371,7 @@
       "tableFonts": []
     },
     {
-      "slide": 35,
+      "slide": 33,
       "title": "Какую среду вы соберёте для себя",
       "images": [
         {
@@ -1575,7 +1395,7 @@
       "tableFonts": []
     },
     {
-      "slide": 36,
+      "slide": 34,
       "title": "Вопросы",
       "images": [
         {
@@ -1599,7 +1419,7 @@
       "tableFonts": []
     },
     {
-      "slide": 37,
+      "slide": 35,
       "title": "Практика: завершаем задачу по ID",
       "images": [],
       "bodyHeight": 626,
@@ -1659,7 +1479,7 @@
       ]
     },
     {
-      "slide": 38,
+      "slide": 36,
       "title": "Что подготовить для повторения",
       "images": [],
       "bodyHeight": 626,
@@ -1754,7 +1574,7 @@
       ]
     },
     {
-      "slide": 39,
+      "slide": 37,
       "title": "Сначала спецификация и план",
       "images": [],
       "bodyHeight": 626,
@@ -1824,7 +1644,7 @@
       ]
     },
     {
-      "slide": 40,
+      "slide": 38,
       "title": "AGENTS.md именно этого проекта",
       "images": [],
       "bodyHeight": 626,
@@ -1894,7 +1714,7 @@
       ]
     },
     {
-      "slide": 41,
+      "slide": 39,
       "title": "Разрешить, спросить или отказать",
       "images": [],
       "bodyHeight": 626,
@@ -1964,7 +1784,7 @@
       ]
     },
     {
-      "slide": 42,
+      "slide": 40,
       "title": "Hook до выполнения команды",
       "images": [],
       "bodyHeight": 626,
@@ -2034,7 +1854,7 @@
       ]
     },
     {
-      "slide": 43,
+      "slide": 41,
       "title": "MCP готовит почту к работе",
       "images": [],
       "bodyHeight": 626,
@@ -2053,7 +1873,7 @@
       "tableFonts": []
     },
     {
-      "slide": 44,
+      "slide": 42,
       "title": "Агент реализует один небольшой шаг",
       "images": [
         {
@@ -2077,7 +1897,7 @@
       "tableFonts": []
     },
     {
-      "slide": 45,
+      "slide": 43,
       "title": "Код запустился, задача не выполнена",
       "images": [],
       "bodyHeight": 603,
@@ -2096,7 +1916,7 @@
       "tableFonts": []
     },
     {
-      "slide": 46,
+      "slide": 44,
       "title": "Устройство и применение skill ревью",
       "images": [],
       "bodyHeight": 626,
@@ -2166,7 +1986,7 @@
       ]
     },
     {
-      "slide": 47,
+      "slide": 45,
       "title": "Приёмка: код, проверки и поведение",
       "images": [],
       "bodyHeight": 626,
@@ -2236,7 +2056,7 @@
       ]
     },
     {
-      "slide": 48,
+      "slide": 46,
       "title": "Письмо Боссу: от черновика до входящих",
       "images": [
         {
@@ -2260,7 +2080,7 @@
       "tableFonts": []
     },
     {
-      "slide": 49,
+      "slide": 47,
       "title": "Что осталось после рабочей сессии",
       "images": [],
       "bodyHeight": 626,
@@ -2330,7 +2150,7 @@
       ]
     },
     {
-      "slide": 50,
+      "slide": 48,
       "title": "Вопросы и самостоятельное повторение",
       "images": [],
       "bodyHeight": 626,
@@ -2431,7 +2251,7 @@
   "keys": {
     "first": "slide-01",
     "second": "slide-02",
-    "last": "slide-50",
+    "last": "slide-48",
     "notes": true
   }
 }
