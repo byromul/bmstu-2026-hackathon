@@ -56,3 +56,20 @@ node assets/verify-deck.mjs
 ```
 
 Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 49 слайдов и оба отдельных блока без сети; прошли 24 теста конвертора. Результаты — [ART-0081](sources/ART-0081-tips-humanizer.md). Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.
+
+
+## GitHub Pages
+
+[Открыть теорию](https://byromul.github.io/bmstu-2026-hackathon/lecture-theory.html). Корень сайта также открывает теорию: [главная страница](https://byromul.github.io/bmstu-2026-hackathon/).
+
+Публикацией управляет [.github/workflows/pages.yml](.github/workflows/pages.yml). При push в main GitHub Actions собирает теоретический блок из slides.md/script.md и публикует только каталог _site. В настройках репозитория Pages источником должен быть GitHub Actions. Workflow можно запустить вручную через Actions.
+
+Локальная подготовка сайта:
+
+```sh
+python3 assets/prepare_pages.py
+```
+
+В _site находятся lecture-theory.html, его полная копия index.html и .nojekyll. Изображения, стили и JavaScript встроены в HTML; отдельные файлы зависимостей для показа не нужны. Внешние источники открываются по ссылкам. Пути работают и внутри адреса проекта /bmstu-2026-hackathon/.
+
+origin указывает на https://github.com/byromul/bmstu-2026-hackathon.git. Отправка использует SSH-адрес того же репозитория и существующий ключ GitHub; main отслеживает origin/main после первого push.

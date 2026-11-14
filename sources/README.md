@@ -240,3 +240,8 @@
 2026-11-14: [ART-0080](ART-0080-student-tips.md) фиксирует четыре совета пользователя и проверку нового слайда. Новые сведения о продуктах не добавлялись.
 
 Уточнение 2026-11-14: добавлен пятый совет о собственном понимании. Редактура humanizer-ru и финальные проверки — [ART-0081](ART-0081-tips-humanizer.md). Пользователь разрешил коммит советов.
+
+
+## Настройка GitHub Pages
+
+2026-11-14 прочитаны [официальная инструкция пользовательского workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) и [Pages REST API](https://docs.github.com/en/rest/pages/pages). Workflow использует опубликованные в инструкции версии checkout v6, configure-pages v5, upload-pages-artifact v4, deploy-pages v4, а также pages:write, id-token:write и окружение github-pages. Сборка _site и 24 теста конвертора выполнены локально; успешный деплой проверяется отдельно после push.

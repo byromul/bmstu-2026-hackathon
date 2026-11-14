@@ -11,3 +11,6 @@ node_modules/
 
 # Окружение локального измерения токенов
 /.venv-token-count/
+
+# Локальная сборка GitHub Pages
+/_site/
