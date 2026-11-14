@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-14T15:42:11.347040+03:00",
+  "repository": "https://github.com/byromul/bmstu-2026-hackathon",
+  "published_commit": "528ac0ba8167beaaf54ac64bb0b19d6d7138ad64",
+  "workflow_url": "https://github.com/byromul/bmstu-2026-hackathon/actions/runs/43595769276",
+  "workflow_result": "success",
+  "entrypoints": [
+    "https://byromul.github.io/bmstu-2026-hackathon/",
+    "https://byromul.github.io/bmstu-2026-hackathon/lecture-theory.html"
+  ],
+  "http_downloads_match_local": true,
+  "bytes_per_html": 11969401,
+  "sha256": "4f46b15548fba7a889477d852c7e3b8dcbac057e5195e83ee9dc87898572646a",
+  "theory_slides": 35,
+  "display_dependencies": "inline CSS/JavaScript and data images, system fonts",
+  "browser": "Google Chrome for Testing 157.0.8103.38",
+  "browser_verified": [
+    "cover 1/35",
+    "next slide and SDLC diagram",
+    "End to slide 35/35 with image",
+    "N opens correct notes",
+    "N closes notes, Home returns to cover"
+  ],
+  "tests_passed": 24,
+  "setup_browser": "Google Chrome; Pages source confirmed by user"
+}

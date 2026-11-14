@@ -245,3 +245,5 @@
 ## Настройка GitHub Pages
 
 2026-11-14 прочитаны [официальная инструкция пользовательского workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) и [Pages REST API](https://docs.github.com/en/rest/pages/pages). Workflow использует опубликованные в инструкции версии checkout v6, configure-pages v5, upload-pages-artifact v4, deploy-pages v4, а также pages:write, id-token:write и окружение github-pages. Сборка _site и 24 теста конвертора выполнены локально; успешный деплой проверяется отдельно после push.
+
+Реальная публикация GitHub Pages завершилась успешно. [ART-0082](ART-0082-pages-publication.md) содержит URL workflow, сравнение опубликованных HTML с локальными и проверку в Google Chrome for Testing.

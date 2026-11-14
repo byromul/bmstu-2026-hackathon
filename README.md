@@ -73,3 +73,5 @@ python3 assets/prepare_pages.py
 В _site находятся lecture-theory.html, его полная копия index.html и .nojekyll. Изображения, стили и JavaScript встроены в HTML; отдельные файлы зависимостей для показа не нужны. Внешние источники открываются по ссылкам. Пути работают и внутри адреса проекта /bmstu-2026-hackathon/.
 
 origin указывает на https://github.com/byromul/bmstu-2026-hackathon.git. Отправка использует SSH-адрес того же репозитория и существующий ключ GitHub; main отслеживает origin/main после первого push.
+
+Публикация проверена: [результат деплоя и браузерной проверки](sources/ART-0082-pages-publication.md). Оба URL открывают одну автономную презентацию из 35 слайдов.
