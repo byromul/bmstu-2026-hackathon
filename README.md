@@ -10,7 +10,7 @@
 | [AGENTS.md](AGENTS.md) | Прочитать правила работы над репозиторием |
 | [slides.md](slides.md) | Работать с единым файлом презентации |
 | [script.md](script.md) | Работать с единым сценарием лектора |
-| [lecture.html](lecture.html) | Открыть все 48 слайдов в Chrome |
+| [lecture.html](lecture.html) | Открыть все 49 слайдов в Chrome |
 | [Теория](lecture-theory.html) / [практика](lecture-practice.html) | Показать каждый блок отдельно |
 | [Практический проект](examples/03-opencode-tasks/README.md) | Повторить демо с OpenCode v2, GLM и Mailpit |
 | [Учебный комплект](lecture-materials.zip) | Скачать код, инструкцию, стартовый промпт и пример подсчёта токенов; начать с START-HERE.md |
@@ -55,4 +55,4 @@ python3 -B assets/test_build.py
 node assets/verify-deck.mjs
 ```
 
-Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 48 слайдов и оба отдельных блока без сети; прошли 24 теста конвертора. Результаты — [ART-0079](sources/ART-0079-remove-grade-example.md). Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.
+Нужны Node.js и Chrome; подробности — в [assets/README.md](assets/README.md#обновление-превью). Проверены 49 слайдов и оба отдельных блока без сети; прошли 24 теста конвертора. Результаты — [ART-0081](sources/ART-0081-tips-humanizer.md). Сквозной запуск практического проекта описан в его README; репетиция 40 + 40 минут и Windows остаются непроверенными.

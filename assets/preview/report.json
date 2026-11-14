@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-13T22:00:56.245Z",
+  "date": "2026-11-14T06:20:57.411Z",
   "chrome": "Chrome/157.0.8103.78",
   "offline": true,
   "reports": [
@@ -1396,6 +1396,25 @@
     },
     {
       "slide": 34,
+      "title": "Пять привычек для работы с агентом",
+      "images": [],
+      "bodyHeight": 626,
+      "scrollHeight": 626,
+      "footerTop": 800,
+      "overflow": [],
+      "titleOverlap": false,
+      "footer": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "height": "76px",
+        "left": "64px",
+        "right": "160px",
+        "bottom": "24px"
+      },
+      "tableFonts": []
+    },
+    {
+      "slide": 35,
       "title": "Вопросы",
       "images": [
         {
@@ -1419,7 +1438,7 @@
       "tableFonts": []
     },
     {
-      "slide": 35,
+      "slide": 36,
       "title": "Практика: завершаем задачу по ID",
       "images": [],
       "bodyHeight": 626,
@@ -1479,7 +1498,7 @@
       ]
     },
     {
-      "slide": 36,
+      "slide": 37,
       "title": "Что подготовить для повторения",
       "images": [],
       "bodyHeight": 626,
@@ -1574,7 +1593,7 @@
       ]
     },
     {
-      "slide": 37,
+      "slide": 38,
       "title": "Сначала спецификация и план",
       "images": [],
       "bodyHeight": 626,
@@ -1644,7 +1663,7 @@
       ]
     },
     {
-      "slide": 38,
+      "slide": 39,
       "title": "AGENTS.md именно этого проекта",
       "images": [],
       "bodyHeight": 626,
@@ -1714,7 +1733,7 @@
       ]
     },
     {
-      "slide": 39,
+      "slide": 40,
       "title": "Разрешить, спросить или отказать",
       "images": [],
       "bodyHeight": 626,
@@ -1784,7 +1803,7 @@
       ]
     },
     {
-      "slide": 40,
+      "slide": 41,
       "title": "Hook до выполнения команды",
       "images": [],
       "bodyHeight": 626,
@@ -1854,7 +1873,7 @@
       ]
     },
     {
-      "slide": 41,
+      "slide": 42,
       "title": "MCP готовит почту к работе",
       "images": [],
       "bodyHeight": 626,
@@ -1873,7 +1892,7 @@
       "tableFonts": []
     },
     {
-      "slide": 42,
+      "slide": 43,
       "title": "Агент реализует один небольшой шаг",
       "images": [
         {
@@ -1897,7 +1916,7 @@
       "tableFonts": []
     },
     {
-      "slide": 43,
+      "slide": 44,
       "title": "Код запустился, задача не выполнена",
       "images": [],
       "bodyHeight": 603,
@@ -1916,7 +1935,7 @@
       "tableFonts": []
     },
     {
-      "slide": 44,
+      "slide": 45,
       "title": "Устройство и применение skill ревью",
       "images": [],
       "bodyHeight": 626,
@@ -1986,7 +2005,7 @@
       ]
     },
     {
-      "slide": 45,
+      "slide": 46,
       "title": "Приёмка: код, проверки и поведение",
       "images": [],
       "bodyHeight": 626,
@@ -2056,7 +2075,7 @@
       ]
     },
     {
-      "slide": 46,
+      "slide": 47,
       "title": "Письмо Боссу: от черновика до входящих",
       "images": [
         {
@@ -2080,7 +2099,7 @@
       "tableFonts": []
     },
     {
-      "slide": 47,
+      "slide": 48,
       "title": "Что осталось после рабочей сессии",
       "images": [],
       "bodyHeight": 626,
@@ -2150,7 +2169,7 @@
       ]
     },
     {
-      "slide": 48,
+      "slide": 49,
       "title": "Вопросы и самостоятельное повторение",
       "images": [],
       "bodyHeight": 626,
@@ -2251,7 +2270,7 @@
   "keys": {
     "first": "slide-01",
     "second": "slide-02",
-    "last": "slide-48",
+    "last": "slide-49",
     "notes": true
   }
 }

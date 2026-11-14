@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-14T09:17:33.103762+03:00",
+  "base_commit": "d6b12d9",
+  "paired_headings": 49,
+  "blocks": [
+    35,
+    14
+  ],
+  "block_seconds": [
+    2400,
+    2400
+  ],
+  "advice_slide": 34,
+  "advice_items": 4,
+  "committed": false,
+  "browser": [
+    {
+      "source": "lecture.html",
+      "slides": 49,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-49",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-theory.html",
+      "slides": 35,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-01",
+        "second": "slide-02",
+        "last": "slide-35",
+        "notes": true
+      }
+    },
+    {
+      "source": "lecture-practice.html",
+      "slides": 14,
+      "overflow": [],
+      "errors": [],
+      "network": [],
+      "materialsDownload": null,
+      "keys": {
+        "first": "slide-36",
+        "second": "slide-37",
+        "last": "slide-49",
+        "notes": true
+      }
+    }
+  ],
+  "hashes": {
+    "slides.md": "e320aa112065eda26a986e7c1fe2dea713f00c8e2a4ae2b6fc75739adb488c5d",
+    "script.md": "9001877f2476567903fb4571182dfb67d330bf6027a35d86a4cd93107110027b",
+    "lecture.html": "d90b17945fc1a85ccb14220b566aa31669f31ca84f2c3052ca463de4677ad1d7",
+    "lecture-theory.html": "440ffa72af23ad507cda5921e2110020bf5199da24585888a928deb08cfdb956",
+    "lecture-practice.html": "671a2dde9e2ff37add185e5ab244f80b91f1f03b49d0ddd400224fca9b058266"
+  }
+}
